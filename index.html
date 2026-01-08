@@ -13,6 +13,9 @@
 --muted: #5f6c7b;
       --line: #e7e7e7;
       --bg: #f7f8fa;
+      --accent: #1f4a7c;
+--accent-soft: #e9f0f8;
+
     }
     *{box-sizing:border-box}
     body{
@@ -22,7 +25,8 @@
       background:var(--bg);
       line-height:1.55;
     }
-    a{color:inherit}
+    a{color:var(--accent)}
+a:hover{opacity:0.85}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
     header{
       position: sticky; top: 0;
