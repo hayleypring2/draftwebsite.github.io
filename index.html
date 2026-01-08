@@ -86,45 +86,46 @@ a:hover{opacity:0.85}
     h1{font-size:40px; line-height:1.12; margin:0 0 10px}
     .sub{color:var(--muted); margin:0; max-width:70ch}
 
-  /* ADD THESE NEW LINES RIGHT HERE */
-  .hero-grid{display:grid; gap:18px; align-items:start;}
-  .hero-photo img{width:100%; height:auto; display:block; border-radius:12px;}
-  .quote{
-    margin: 0;
-    padding: 14px 16px;
-    border-left: 4px solid var(--line);
-    background: #fafafa;
-    border-radius: 12px;
-  }
-    /* Quote styling inside hero banner */
+/* Quote styling inside hero banner (clean version) */
 .hero .quote{
+  position: relative;
   background: rgba(255,255,255,0.92);
   color: #111;
   border-left: 5px solid rgba(0,0,0,0.35);
-  padding: 18px 20px;
+  padding: 22px 24px 20px 36px; /* extra left padding so the big quote doesn't overlap */
   font-style: italic;
   font-size: 1.05rem;
   line-height: 1.6;
 }
 
+.hero .quote::before{
+  content: "“";
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  font-size: 3rem;
+  line-height: 1;
+  color: rgba(0,0,0,0.25);
+}
+
+.hero .quote::after{
+  content: "”";
+  position: absolute;
+  right: 14px;
+  bottom: 6px;
+  font-size: 3rem;
+  line-height: 1;
+  color: rgba(0,0,0,0.25);
+}
+
 .hero .quote .meta{
   display:block;
-  margin-top:8px;
+  margin-top:10px;
   font-style: normal;
   font-size: 0.9rem;
   color: #555;
 }
 
-    .hero .quote::before{
-  content: "“";
-  font-size: 3rem;
-  line-height: 1;
-  position: absolute;
-  margin-left: -14px;
-  margin-top: -6px;
-  color: rgba(0,0,0,0.25);
-}
-.hero .quote{ position: relative; }
 
 
   @media (min-width: 820px){
@@ -242,7 +243,7 @@ img{display:block; max-width:100%;}
 
 
     <section id="about">
-      <h2>About the Author</h2>
+      <h2>About</h2>
       <div class="card">
         <p>
           Prior to coming to the Blavatnik School, he taught at the European University Institute and at the Harvard Kennedy School. His book Quiet Politics and Business Power: Corporate Control in Europe and Japan (Cambridge University Press 2011), was awarded the 2012 Stein Rokkan Prize for Comparative Social Science Research. <br>
