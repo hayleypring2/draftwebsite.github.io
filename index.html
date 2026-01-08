@@ -98,15 +98,34 @@ a:hover{opacity:0.85}
   }
     /* Quote styling inside hero banner */
 .hero .quote{
-  background: rgba(255,255,255,0.85);
-backdrop-filter: blur(4px);
+  background: rgba(255,255,255,0.92);
   color: #111;
-  border-left: 4px solid rgba(0,0,0,0.2);
+  border-left: 5px solid rgba(0,0,0,0.35);
+  padding: 18px 20px;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .hero .quote .meta{
-  color: #444;
+  display:block;
+  margin-top:8px;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #555;
 }
+
+    .hero .quote::before{
+  content: "“";
+  font-size: 3rem;
+  line-height: 1;
+  position: absolute;
+  margin-left: -14px;
+  margin-top: -6px;
+  color: rgba(0,0,0,0.25);
+}
+.hero .quote{ position: relative; }
+
 
   @media (min-width: 820px){
     .hero-grid{grid-template-columns: 360px 1fr;}
@@ -210,8 +229,8 @@ img{display:block; max-width:100%;}
     </p>
 
     <blockquote class="quote">
-      “In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they face away.”
-      <span class="meta">— Source (Henry Farrell: Author of Underground Empire)</span>
+      In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they face away.
+      <span class="meta">— Henry Farrell: Author of Underground Empire</span>
     </blockquote>
 
     <div class="btnrow" style="margin-top:14px;">
