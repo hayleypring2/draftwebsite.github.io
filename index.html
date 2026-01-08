@@ -45,6 +45,21 @@
     h1{font-size:40px; line-height:1.12; margin:0 0 10px}
     .sub{color:var(--muted); margin:0; max-width:70ch}
 
+  /* ADD THESE NEW LINES RIGHT HERE */
+  .hero-grid{display:grid; gap:18px; align-items:start;}
+  .hero-photo img{width:100%; height:auto; display:block; border-radius:12px;}
+  .quote{
+    margin: 0;
+    padding: 14px 16px;
+    border-left: 4px solid var(--line);
+    background: #fafafa;
+    border-radius: 12px;
+  }
+  @media (min-width: 820px){
+    .hero-grid{grid-template-columns: 360px 1fr;}
+  }
+
+
     section{padding:34px 0; border-top:1px solid var(--line);}
     h2{font-size:22px; margin:0 0 12px}
     .grid{display:grid; grid-template-columns: 1fr; gap:12px;}
@@ -93,13 +108,32 @@
   </header>
 
   <main class="wrap">
-    <div class="hero">
-      <p class="kicker">Official site (draft)</p>
-      <h1>Author Name</h1>
-      <p class="sub">
-        Short 1–2 sentence bio goes here. Mention the latest book and the kind of writing (nonfiction, thriller, essays, etc.).
-      </p>
+   <div class="hero hero-grid">
+  <div class="hero-photo card">
+    <img src="assets/author.jpg" alt="Author portrait" />
+    <p class="meta" style="margin-top:10px;">Photo credit (optional)</p>
+  </div>
+
+  <div>
+    <p class="kicker">Official site (draft)</p>
+    <h1>Author Name</h1>
+
+    <p class="sub" style="margin-bottom:16px;">
+      Short 1–2 sentence bio goes here. Mention the latest book and the kind of writing.
+    </p>
+
+    <blockquote class="quote">
+      “A punchy endorsement / quote can go here.”
+      <span class="meta">— Source (Publication / Person)</span>
+    </blockquote>
+
+    <div class="btnrow" style="margin-top:14px;">
+      <a class="btn" href="#books">View books</a>
+      <a class="btn" href="#contact">Contact</a>
     </div>
+  </div>
+</div>
+
 
     <section id="about">
       <h2>About the Author</h2>
