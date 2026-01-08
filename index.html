@@ -69,6 +69,32 @@
       padding:16px;
       background:#fff;
     }
+    /* BOOK STYLES */
+.featured-book{padding:18px}
+
+.book-grid{
+  display:grid;
+  gap:16px;
+  align-items:start;
+}
+
+.cover{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  border:1px solid var(--line);
+}
+
+.book-small{
+  display:grid;
+  grid-template-columns: 80px 1fr;
+  gap:12px;
+  align-items:start;
+}
+
+.cover.small{width:80px}
+/* END BOOK STYLES */
+
     .meta{color:var(--muted); font-size:14px; margin:6px 0 0}
     .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
     .btn{
@@ -85,9 +111,11 @@
     .list{margin:0; padding-left:18px}
     footer{padding:28px 0; color:var(--muted); font-size:14px; border-top:1px solid var(--line);}
     @media (min-width: 820px){
-      .grid{grid-template-columns: 1fr 1fr;}
-      h1{font-size:48px;}
-    }
+  .grid{grid-template-columns: 1fr 1fr;}
+  .book-grid{grid-template-columns: 220px 1fr;}
+  h1{font-size:48px;}
+}
+
   </style>
 </head>
 
@@ -145,33 +173,51 @@
       </div>
     </section>
 
-    <section id="books">
-      <h2>Books</h2>
-      <div class="grid">
-        <div class="card">
-          <strong>Book Title (Newest)</strong>
-          <p class="meta">Publisher • Year</p>
-          <p>
-            2–4 sentence description of the book. What is it about? Why does it matter?
-          </p>
-          <div class="btnrow">
-            <a class="btn" href="#" target="_blank" rel="noopener">Buy (Amazon)</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">Buy (Bookshop)</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">Press Kit</a>
-          </div>
-        </div>
+<section id="books">
+  <h2>Books</h2>
 
-        <div class="card">
-          <strong>Book Title</strong>
-          <p class="meta">Publisher • Year</p>
-          <p>Short description.</p>
-          <div class="btnrow">
-            <a class="btn" href="#" target="_blank" rel="noopener">Buy</a>
-            <a class="btn" href="#" target="_blank" rel="noopener">More details</a>
-          </div>
+  <!-- Featured new book -->
+  <div class="card featured-book">
+    <div class="book-grid">
+      <img class="cover" src="./assets/bill_backlash.jpg" alt="Cover of New Book Title">
+
+      <div>
+        <p class="kicker">New book</p>
+        <h3 style="margin:0 0 6px;">NEW BOOK TITLE</h3>
+        <p class="meta">Publisher • Year</p>
+
+        <p style="margin-top:10px;">
+          One strong paragraph explaining what this book is about and
+          why it matters now. Think jacket copy, not an academic abstract.
+        </p>
+
+        <div class="btnrow">
+          <a class="btn" href="#" target="_blank">Buy</a>
+          <a class="btn" href="#" target="_blank">Learn more</a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+
+<h3 style="margin:24px 0 12px;">Earlier books</h3>
+
+<div class="grid">
+  <div class="card">
+    <div class="book-small">
+      <img class="cover small" src="./assets/quietpolitics.jpg" alt="Cover of Older Book Title">
+      <div>
+        <strong>Older Book Title</strong>
+        <p class="meta">Publisher • Year</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Repeat for additional older books -->
+</div>
+
+
+</section>
+
 
     <section id="articles">
       <h2>Selected Articles</h2>
