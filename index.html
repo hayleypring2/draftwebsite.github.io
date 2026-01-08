@@ -1,13 +1,180 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
   <meta charset="utf-8">
-  <title>Author Draft</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Author Name — Official Site (Draft)</title>
+  <meta name="description" content="Official author website: books, articles, and contact.">
+  <style>
+    :root{
+      --max: 980px;
+      --pad: 20px;
+      --text: #111;
+      --muted: #555;
+      --line: #e7e7e7;
+      --bg: #fff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
+    header{
+      position: sticky; top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+    nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:14px 0;
+    }
+    .brand{font-weight:700; letter-spacing:0.2px; text-decoration:none;}
+    .navlinks{display:flex; flex-wrap:wrap; gap:14px; font-size:14px;}
+    .navlinks a{ text-decoration:none; color:var(--muted); }
+    .navlinks a:hover{ color:var(--text); }
+
+    .hero{padding:44px 0 10px}
+    .kicker{color:var(--muted); font-size:14px; margin:0 0 8px}
+    h1{font-size:40px; line-height:1.12; margin:0 0 10px}
+    .sub{color:var(--muted); margin:0; max-width:70ch}
+
+    section{padding:34px 0; border-top:1px solid var(--line);}
+    h2{font-size:22px; margin:0 0 12px}
+    .grid{display:grid; grid-template-columns: 1fr; gap:12px;}
+    .card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+    }
+    .meta{color:var(--muted); font-size:14px; margin:6px 0 0}
+    .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+    .btn{
+      display:inline-block;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      text-decoration:none;
+      font-size:14px;
+      color:var(--text);
+      background:#fafafa;
+    }
+    .btn:hover{background:#f2f2f2}
+    .list{margin:0; padding-left:18px}
+    footer{padding:28px 0; color:var(--muted); font-size:14px; border-top:1px solid var(--line);}
+    @media (min-width: 820px){
+      .grid{grid-template-columns: 1fr 1fr;}
+      h1{font-size:48px;}
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Draft author website</h1>
-  <p>If you can read this, GitHub Pages is working 🎉</p>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#top">Author Name</a>
+        <div class="navlinks">
+          <a href="#about">About</a>
+          <a href="#books">Books</a>
+          <a href="#articles">Articles</a>
+          <a href="#subscribe">Subscribe</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <p class="kicker">Official site (draft)</p>
+      <h1>Author Name</h1>
+      <p class="sub">
+        Short 1–2 sentence bio goes here. Mention the latest book and the kind of writing (nonfiction, thriller, essays, etc.).
+      </p>
+    </div>
+
+    <section id="about">
+      <h2>About the Author</h2>
+      <div class="card">
+        <p>
+          This is the longer bio section. Add 2–5 short paragraphs. Keep it skimmable.
+        </p>
+        <p class="meta">Optional: location • represented by • media inquiries</p>
+      </div>
+    </section>
+
+    <section id="books">
+      <h2>Books</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Book Title (Newest)</strong>
+          <p class="meta">Publisher • Year</p>
+          <p>
+            2–4 sentence description of the book. What is it about? Why does it matter?
+          </p>
+          <div class="btnrow">
+            <a class="btn" href="#" target="_blank" rel="noopener">Buy (Amazon)</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Buy (Bookshop)</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Press Kit</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <strong>Book Title</strong>
+          <p class="meta">Publisher • Year</p>
+          <p>Short description.</p>
+          <div class="btnrow">
+            <a class="btn" href="#" target="_blank" rel="noopener">Buy</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">More details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="articles">
+      <h2>Selected Articles</h2>
+      <div class="card">
+        <ul class="list">
+          <li><a href="#" target="_blank" rel="noopener">Article Title One</a> <span class="meta">— Publication</span></li>
+          <li><a href="#" target="_blank" rel="noopener">Article Title Two</a> <span class="meta">— Publication</span></li>
+          <li><a href="#" target="_blank" rel="noopener">Article Title Three</a> <span class="meta">— Publication</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="subscribe">
+      <h2>Subscribe</h2>
+      <div class="card">
+        <p>Paste a newsletter link here (Substack/Mailchimp/etc.), or just provide an email list signup link.</p>
+        <div class="btnrow">
+          <a class="btn" href="#" target="_blank" rel="noopener">Join the newsletter</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p><strong>Media / speaking:</strong> <a href="mailto:someone@example.com">someone@example.com</a></p>
+        <p><strong>Social:</strong> <a href="#" target="_blank" rel="noopener">Instagram</a> · <a href="#" target="_blank" rel="noopener">X</a> · <a href="#" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Author Name. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
