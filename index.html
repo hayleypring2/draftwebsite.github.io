@@ -161,6 +161,21 @@
         align-items: start;
       }
     }
+
+    /* FEATURED BOOK BANNER */
+.book-banner{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  border: 1px solid var(--line);
+}
+
+.book-details{
+  max-width: 70ch;
+}
+
   </style>
 </head>
 
@@ -210,33 +225,50 @@
     </div>
 
 
-    <section id="books">
-      <h2>Upcoming Release</h2>
+<section id="books">
+  <h2>Upcoming Release</h2>
 
-      <div class="card featured-book">
-        <div class="book-grid">
-          <img class="cover" src="./assets/BB_SOCIALS_V2_2.jpg" alt="Cover of Billionaire Backlash" style="width:220px; height:auto;">
+  <div class="card featured-book">
 
-          <div>
-            <p class="kicker">Upcoming Release: February 2026</p>
-            <h3 style="margin:0 0 6px;">Billionaire Backlash: The Age of Corporate Scandal and How it Could Save Democracy</h3>
-            <p class="meta">Bloomsbury • 2026</p>
+    <!-- BIG BANNER IMAGE -->
+    <img
+      class="book-banner"
+      src="./assets/BB_SOCIALS_V2_2.jpg"
+      alt="Billionaire Backlash book banner"
+    >
 
-            <p style="margin-top:10px;"><b>The surprising story of how corporate scandals - from Enron to the Facebook privacy scandal - change the way the world works for the better.</b></p>
+    <!-- TEXT BELOW IMAGE -->
+    <div class="book-details">
+      <p class="kicker">Upcoming Release: February 2026</p>
 
-            <p>
-              Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion to show us how scandals can ignite a public with few political outlets for their discontent...
-            </p>
+      <h3 style="margin:0 0 6px;">
+        Billionaire Backlash: The Age of Corporate Scandal and How it Could Save Democracy
+      </h3>
 
-            <div class="btnrow">
-              <a class="btn" href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106" target="_blank" rel="noopener">Buy</a>
-              <a class="btn" href="https://www.bloomsbury.com/uk/billionaire-backlash-9781399424110/" target="_blank" rel="noopener">Learn more</a>
-              <a class="btn" href="other-work.html">See other books</a>
-            </div>
-          </div>
-        </div>
+      <p class="meta">Bloomsbury • 2026</p>
+
+      <p style="margin-top:12px;">
+        <strong>
+          The surprising story of how corporate scandals — from Enron to the Facebook privacy scandal —
+          change the way the world works for the better.
+        </strong>
+      </p>
+
+      <p>
+        Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion
+        to show us how scandals can ignite a public with few political outlets for their discontent.
+      </p>
+
+      <div class="btnrow">
+        <a class="btn" href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106" target="_blank" rel="noopener">Buy</a>
+        <a class="btn" href="https://www.bloomsbury.com/uk/billionaire-backlash-9781399424110/" target="_blank" rel="noopener">Learn more</a>
+        <a class="btn" href="other-work.html">See other books</a>
       </div>
-    </section>
+    </div>
+
+  </div>
+</section>
+
 
     <section>
       <h2>Research & Commentary</h2>
