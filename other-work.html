@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Other Work • Pepper Culpepper</title>
+  <meta name="description" content="Books and edited volumes.">
+
+  <style>
+    :root{ --max:980px; --pad:20px; --text:#1f2933; --muted:#5f6c7b; --line:#e7e7e7; --bg:#f7f8fa; --accent:#1f4a7c; }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--text); background:var(--bg); line-height:1.55;}
+    a{color:var(--accent)} a:hover{opacity:0.85}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
+    header{ position: sticky; top:0; background: rgba(247,248,250,0.95); backdrop-filter: blur(6px); border-bottom:1px solid var(--line); z-index:10;}
+    nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0;}
+    .brand{font-weight:700; text-decoration:none;}
+    .navlinks{display:flex; flex-wrap:wrap; gap:14px; font-size:14px;}
+    .navlinks a{text-decoration:none; color:var(--muted);} .navlinks a:hover{color:var(--text);}
+    section{padding:34px 0;}
+    h1{font-size:34px; margin:22px 0 10px;}
+    h2{font-size:22px; margin:0 0 12px}
+    .card{border:1px solid var(--line); border-radius:14px; padding:16px; background:#fff;}
+    .grid{display:grid; grid-template-columns:1fr; gap:12px;}
+    .book-small{display:grid; grid-template-columns:80px 1fr; gap:12px; align-items:center;}
+    img{display:block; max-width:100%;}
+    .cover{border-radius:12px; border:1px solid var(--line);}
+    .cover.small{width:80px}
+    .meta{color:var(--muted); font-size:14px; margin:6px 0 0}
+    .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+    .btn{display:inline-block; padding:10px 12px; border:1px solid var(--line); border-radius:12px; text-decoration:none; font-size:14px; color:var(--text); background:#fafafa;}
+    .btn:hover{background:#f2f2f2}
+    footer{padding:28px 0; color:var(--muted); font-size:14px; border-top:1px solid var(--line);}
+    @media (min-width:820px){ .grid{grid-template-columns:1fr 1fr;} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="index.html">Pepper Culpepper</a>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="other-work.html">Other Work</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h1>Other Work</h1>
+      <p class="meta">Books and edited volumes.</p>
+
+      <div class="grid" style="margin-top:16px;">
+
+        <div class="card">
+          <div class="book-small">
+            <img class="cover small" src="./assets/quietpolitics.jpg" alt="Cover of Quiet Politics and Business Power">
+            <div>
+              <strong>Quiet Politics and Business Power: Corporate Control in Europe and Japan</strong>
+              <p class="meta">Cambridge University Press • 2012</p>
+              <div class="btnrow">
+                <a class="btn" href="https://www.amazon.com/Quiet-Politics-Business-Power-Comparative/dp/0521134137/" target="_blank" rel="noopener">Buy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="book-small">
+            <img class="cover small" src="./assets/changing_france.jpg" alt="Cover of Changing France">
+            <div>
+              <strong>Changing France: The Politics that Markets Make</strong>
+              <p class="meta">Palgrave Macmillan • 2008</p>
+              <div class="btnrow">
+                <a class="btn" href="https://www.amazon.com/Changing-France-Politics-Markets-Society/dp/0230204473/" target="_blank" rel="noopener">Buy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="book-small">
+            <img class="cover small" src="./assets/states_capital.jpg" alt="Cover of Creating Cooperation">
+            <div>
+              <strong>Creating Cooperation: How States Develop Human Capital in Europe</strong>
+              <p class="meta">Cornell Studies in Political Economy • 2002</p>
+              <div class="btnrow">
+                <a class="btn" href="https://www.amazon.com/exec/obidos/tg/detail/-/0801440696/" target="_blank" rel="noopener">Buy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="book-small">
+            <img class="cover small" src="./assets/german_skills.jpg" alt="Cover of The German Skills Machine">
+            <div>
+              <strong>The German Skills Machine: Sustaining Comparative Advantage in a Global Economy</strong>
+              <p class="meta">Berghahn Books • 1999</p>
+              <div class="btnrow">
+                <a class="btn" href="https://www.amazon.com/German-Skills-Machine-Comparative-Institutions/dp/1571811443/" target="_blank" rel="noopener">Buy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Pepper Culpepper. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
