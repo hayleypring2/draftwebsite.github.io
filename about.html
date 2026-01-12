@@ -1,1 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About • Pepper Culpepper</title>
+  <meta name="description" content="About Pepper Culpepper">
+
+  <style>
+    :root{
+      --max:980px;
+      --pad:20px;
+      --text:#1f2933;
+      --muted:#5f6c7b;
+      --line:#e7e7e7;
+      --bg:#f7f8fa;
+      --accent:#1f4a7c;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+    }
+    a{color:var(--accent)}
+    a:hover{opacity:0.85}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
+    header{
+      position: sticky; top: 0;
+      background: rgba(247,248,250,0.95);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
+      z-index: 10;
+    }
+    nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:14px 0;
+    }
+    .brand{font-weight:700; text-decoration:none;}
+    .navlinks{display:flex; flex-wrap:wrap; gap:14px; font-size:14px;}
+    .navlinks a{ text-decoration:none; color:var(--muted); }
+    .navlinks a:hover{ color:var(--text); }
+
+    section{padding:34px 0;}
+    h1{font-size:34px; margin:22px 0 10px}
+    .card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      background:#ffffff;
+    }
+    .meta{color:var(--muted); font-size:14px; margin-top:10px}
+    footer{
+      padding:28px 0;
+      color:var(--muted);
+      font-size:14px;
+      border-top:1px solid var(--line);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="index.html">Pepper Culpepper</a>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="publications.html">Publications</a>
+          <a href="other-work.html">Other Work</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h1>About</h1>
+
+      <div class="card">
+        <p>
+          Prior to coming to the Blavatnik School, Pepper Culpepper taught at the European University Institute and at the Harvard Kennedy School. His book <em>Quiet Politics and Business Power: Corporate Control in Europe and Japan</em> (Cambridge University Press, 2011) was awarded the 2012 Stein Rokkan Prize for Comparative Social Science Research.
+        </p>
+
+        <p>
+          He is the author of <em>Creating Cooperation</em> (Cornell University Press, 2003) and co-editor of <em>Changing France</em> (with Peter Hall and Bruno Palier, Palgrave, 2006) and <em>The German Skills Machine</em> (with David Finegold, Berghahn Books, 1999).
+        </p>
+
+        <p>
+          His work has appeared in <em>Comparative Political Studies</em>, <em>International Organization</em>, <em>Politics & Society</em>, <em>Socio-Economic Review</em>, <em>World Politics</em>, <em>West European Politics</em>, and other leading journals.
+        </p>
+
+        <p>
+          He has published commentary in the <em>Washington Post</em>, <em>Le Monde</em>, <em>International Herald Tribune</em>, and <em>The New Republic</em>. A former Marshall Scholar at the University of Oxford, he has held long-term visiting appointments in France, Germany, and Japan.
+        </p>
+
+        <p class="meta">Oxford, UK</p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Pepper Culpepper. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
