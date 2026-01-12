@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact • Pepper Culpepper</title>
+  <meta name="description" content="Contact and social links.">
+
+  <style>
+    :root{ --max:980px; --pad:20px; --text:#1f2933; --muted:#5f6c7b; --line:#e7e7e7; --bg:#f7f8fa; --accent:#1f4a7c; }
+    *{box-sizing:border-box}
+    body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--text); background:var(--bg); line-height:1.55;}
+    a{color:var(--accent)} a:hover{opacity:0.85}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
+    header{ position: sticky; top:0; background: rgba(247,248,250,0.95); backdrop-filter: blur(6px); border-bottom:1px solid var(--line); z-index:10;}
+    nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0;}
+    .brand{font-weight:700; text-decoration:none;}
+    .navnavlinks{display:flex; flex-wrap:wrap; gap:14px; font-size:14px;}
+    .navlinks{display:flex; flex-wrap:wrap; gap:14px; font-size:14px;}
+    .navlinks a{text-decoration:none; color:var(--muted);} .navlinks a:hover{color:var(--text);}
+    section{padding:34px 0;}
+    h1{font-size:34px; margin:22px 0 10px;}
+    .card{border:1px solid var(--line); border-radius:14px; padding:16px; background:#fff;}
+    .meta{color:var(--muted); font-size:14px; margin:6px 0 0}
+    footer{padding:28px 0; color:var(--muted); font-size:14px; border-top:1px solid var(--line);}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="index.html">Pepper Culpepper</a>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="other-work.html">Other Work</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h1>Contact</h1>
+      <div class="card">
+        <p><strong>Media / speaking:</strong> <a href="mailto:Pepper.Culpepper@bsg.ox.ac.uk">Pepper.Culpepper@bsg.ox.ac.uk</a></p>
+        <p><strong>Social:</strong>
+          <a href="https://bsky.app/profile/pculpepper.bsky.social" target="_blank" rel="noopener">Bluesky</a> ·
+          <a href="https://x.com/PepperCulpepper" target="_blank" rel="noopener">X</a> ·
+          <a href="https://www.bsg.ox.ac.uk/people/pepper-culpepper" target="_blank" rel="noopener">Other Website</a>
+        </p>
+        <p class="meta">Oxford, UK</p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Pepper Culpepper. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
