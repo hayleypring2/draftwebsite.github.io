@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pepper Culpepper</title>
   <meta name="description" content="Official author website: books, articles, and contact.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
       --max: 980px;
       --pad: 20px;
-    --text: #1f2933;
---muted: #5f6c7b;
+      --text: #1f2933;
+      --muted: #5f6c7b;
       --line: #e7e7e7;
       --bg: #f7f8fa;
       --accent: #1f4a7c;
---accent-soft: #e9f0f8;
-
+      --accent-soft: #e9f0f8;
     }
     *{box-sizing:border-box}
     body{
@@ -30,7 +30,7 @@
       line-height:1.55;
     }
     a{color:var(--accent)}
-a:hover{opacity:0.85}
+    a:hover{opacity:0.85}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
     header{
       position: sticky; top: 0;
@@ -49,71 +49,57 @@ a:hover{opacity:0.85}
     .navlinks a:hover{ color:var(--text); }
 
     /* HERO BANNER */
-.hero{
-  position: relative;
-  padding: 34px 0 24px;
-  margin-top: 14px;
-  border-radius: 18px;
-  overflow: hidden;
-  background:
-    linear-gradient(rgba(10,20,30,0.70), rgba(10,20,30,0.35)),
-    url("./assets/bsg_image1.jpg");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-
-}
-
-.hero .kicker,
-.hero .sub,
-.hero .meta{ color: rgba(255,255,255,0.85); }
-
-.hero h1{ color:#fff; }
-
-.hero .card{
-  background: rgba(255,255,255,0.10);
-  border: 1px solid rgba(255,255,255,0.18);
-}
-
-.hero .btn{
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.22);
-  color:#fff;
-}
-.hero .btn:hover{ background: rgba(255,255,255,0.18); }
-/* END HERO BANNER */
+    .hero{
+      position: relative;
+      padding: 34px 0 24px;
+      margin-top: 14px;
+      border-radius: 18px;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(10,20,30,0.70), rgba(10,20,30,0.35)),
+        url("./assets/bsg_image1.jpg");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+    .hero .kicker,
+    .hero .sub,
+    .hero .meta{ color: rgba(255,255,255,0.85); }
+    .hero h1{ color:#fff; }
+    .hero .card{
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    .hero .btn{
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      color:#fff;
+    }
+    .hero .btn:hover{ background: rgba(255,255,255,0.18); }
+    /* END HERO BANNER */
 
     .kicker{color:var(--muted); font-size:14px; margin:0 0 8px}
     h1{font-size:40px; line-height:1.12; margin:0 0 10px}
     .sub{color:var(--muted); margin:0; max-width:70ch}
     .hero-grid{display:grid; gap:18px; align-items:start;}
-.hero-photo img{width:100%; height:auto; display:block; border-radius:12px;}
+    .hero-photo img{width:100%; height:auto; display:block; border-radius:12px;}
 
-
-.hero .quote{
-  background: rgba(255,255,255,0.92);
-  color: #111;
-  border-left: 5px solid rgba(0,0,0,0.35);
-  padding: 18px 20px;
-  font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-.hero .quote .meta{
-  display:block;
-  margin-top:8px;
-  font-style: normal;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-
-
-  @media (min-width: 820px){
-    .hero-grid{grid-template-columns: 360px 1fr;}
-  }
-
+    .hero .quote{
+      background: rgba(255,255,255,0.92);
+      color: #111;
+      border-left: 5px solid rgba(0,0,0,0.35);
+      padding: 18px 20px;
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .hero .quote .meta{
+      display:block;
+      margin-top:8px;
+      font-style: normal;
+      font-size: 0.9rem;
+      color: #555;
+    }
 
     section{padding:34px 0; border-top:1px solid var(--line);}
     h2{font-size:22px; margin:0 0 12px}
@@ -124,36 +110,23 @@ a:hover{opacity:0.85}
       padding:16px;
       background:#ffffff;
     }
+
     /* BOOK STYLES */
-.featured-book{padding:18px}
-    
-img{display:block; max-width:100%;}
-
-.book-grid{
-  display:grid;
-  gap:16px;
-  align-items:start;
-}
-
-.cover{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius:12px;
-  border:1px solid var(--line);
-}
-
-
-.book-small{
-  display:grid;
-  grid-template-columns: 80px 1fr;
-  gap:12px;
-  align-items:center;
-}
-
-
-.cover.small{width:80px}
-/* END BOOK STYLES */
+    .featured-book{padding:18px}
+    img{display:block; max-width:100%;}
+    .book-grid{
+      display:grid;
+      gap:16px;
+      align-items:start;
+    }
+    .cover{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:12px;
+      border:1px solid var(--line);
+    }
+    /* END BOOK STYLES */
 
     .meta{color:var(--muted); font-size:14px; margin:6px 0 0}
     .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
@@ -170,12 +143,24 @@ img{display:block; max-width:100%;}
     .btn:hover{background:#f2f2f2}
     .list{margin:0; padding-left:18px}
     footer{padding:28px 0; color:var(--muted); font-size:14px; border-top:1px solid var(--line);}
-    @media (min-width: 820px){
-  .grid{grid-template-columns: 1fr 1fr;}
-  .book-grid{grid-template-columns: 220px 1fr;}
-  h1{font-size:48px;}
-}
 
+    /* ARTICLES + MEDIA side-by-side on desktop */
+    .twocol{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 820px){
+      .grid{grid-template-columns: 1fr 1fr;}
+      .book-grid{grid-template-columns: 220px 1fr;}
+      .hero-grid{grid-template-columns: 360px 1fr;}
+      h1{font-size:48px;}
+      .twocol{
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: start;
+      }
+    }
   </style>
 </head>
 
@@ -183,264 +168,145 @@ img{display:block; max-width:100%;}
   <header>
     <div class="wrap">
       <nav>
-        <a class="brand" href="#top">Pepper Culpepper</a>
+        <a class="brand" href="index.html">Pepper Culpepper</a>
         <div class="navlinks">
-          <a href="#about">About</a>
-          <a href="#books">Books</a>
-          <a href="#articles">Articles</a>
-          <a href="#subscribe">Subscribe</a>
-          <a href="#media">In the Media</a>
-          <a href="#contact">Contact</a>
-          <a href="publications.html">All Publications</a>
+          <a href="index.html">Home</a>
+          <a href="publications.html">Publications</a>
+          <a href="other-work.html">Other Work</a>
+          <a href="contact.html">Contact</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-   <div class="hero hero-grid">
-  <div class="hero-photo card">
-    <img src="./assets/author.jpg" alt="Author portrait" />
-    <p class="meta" style="margin-top:10px;">Photo credit: Blavatnik School of Government</p>
-  </div>
 
-  <div>
-    <p class="kicker"></p>
-    <h1>Pepper Culpepper</h1>
+    <div class="hero hero-grid">
+      <div class="hero-photo card">
+        <img src="./assets/author.jpg" alt="Author portrait" />
+        <p class="meta" style="margin-top:10px;">Photo credit: Blavatnik School of Government</p>
+      </div>
 
-    <p class="sub" style="margin-bottom:16px;">
-      Pepper Culpepper is Blavatnik Professor of Government and Public Policy at the Blavatnik School of Government and a Professorial Fellow at Nuffield College at the University of Oxford.<br>
-      He is the Vice Dean for Academic Affairs and Blavatnik Chair in Government and Public Policy. His research focuses on the intersection between capitalism and democracy, both in politics and in public policy.<br> 
-      His upcoming book 'Billionaire Backlash' with Taeku Lee will be available from 29 January 2026. 
-    </p>
+      <div>
+        <h1>Pepper Culpepper</h1>
 
-    <blockquote class="quote">
-      In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they face away.
-      <span class="meta">— Henry Farrell: Author of Underground Empire</span>
-    </blockquote>
+        <p class="sub" style="margin-bottom:16px;">
+          Pepper Culpepper is Blavatnik Professor of Government and Public Policy at the Blavatnik School of Government and a Professorial Fellow at Nuffield College at the University of Oxford.<br>
+          He is the Vice Dean for Academic Affairs and Blavatnik Chair in Government and Public Policy. His research focuses on the intersection between capitalism and democracy, both in politics and in public policy.<br>
+          His upcoming book 'Billionaire Backlash' with Taeku Lee will be available from 29 January 2026.
+        </p>
 
-    <div class="btnrow" style="margin-top:14px;">
-      <a class="btn" href="#books">View books</a>
-      <a class="btn" href="#contact">Contact</a>
+        <blockquote class="quote">
+          In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they face away.
+          <span class="meta">— Henry Farrell: Author of Underground Empire</span>
+        </blockquote>
+
+        <div class="btnrow" style="margin-top:14px;">
+          <a class="btn" href="#books">View book</a>
+          <a class="btn" href="contact.html">Contact</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
 
     <section id="about">
       <h2>About</h2>
       <div class="card">
         <p>
           Prior to coming to the Blavatnik School, he taught at the European University Institute and at the Harvard Kennedy School. His book Quiet Politics and Business Power: Corporate Control in Europe and Japan (Cambridge University Press 2011), was awarded the 2012 Stein Rokkan Prize for Comparative Social Science Research. <br><br>
-          
+
           He is the author of Creating Cooperation (Cornell University Press, 2003) and co-editor of Changing France (with Peter Hall and Bruno Palier, Palgrave 2006) and of The German Skills Machine (with David Finegold, Berghahn Books 1999).<br><br>
-          
+
           His work has appeared in Comparative Political Studies, International Organization, Politics & Society, Socio-Economic Review, World Politics, Revue Française de Science Politique, Politische Vierteljahresschrift, West European Politics, Journal of European Public Policy, Journal of Public Policy, Business and Politics, and the Oxford Review of Economic Policy, among others. <br><br>
-          
-          He has published commentary on public policy issues in the Washington Post, Le Monde, International Herald Tribune, and the New Republic. A former Marshall Scholar at the University of Oxford, he has also held long-term visiting appointments in France, Germany, and Japan. <br><br>
+
+          He has published commentary on public policy issues in the Washington Post, Le Monde, International Herald Tribune, and the New Republic. A former Marshall Scholar at the University of Oxford, he has also held long-term visiting appointments in France, Germany, and Japan.
         </p>
-        <p class="meta"> Oxford, UK • represented by • media inquiries</p>
+        <p class="meta">Oxford, UK</p>
       </div>
     </section>
 
-<section id="books">
-  <h2>Books</h2>
+    <section id="books">
+      <h2>Books</h2>
 
-  <!-- Featured new book -->
-  <div class="card featured-book">
-    <div class="book-grid">
-      <img class="cover" src="./assets/bill_backlash.jpg" alt="Cover of New Book Title" style="width:220px; height:auto; border:4px solid red;">
+      <div class="card featured-book">
+        <div class="book-grid">
+          <img class="cover" src="./assets/bill_backlash.jpg" alt="Cover of Billionaire Backlash" style="width:220px; height:auto;">
 
+          <div>
+            <p class="kicker">Upcoming Release: February 2026</p>
+            <h3 style="margin:0 0 6px;">Billionaire Backlash: The Age of Corporate Scandal and How it Could Save Democracy</h3>
+            <p class="meta">Bloomsbury • 2026</p>
 
-      <div>
-        <p class="kicker"> Upcoming Release: February 2026</p>
-        <h3 style="margin:0 0 6px;">Billionaire Backlash: The Age of Corporate Scandal and How it Could Save Democracy</h3>
-        <p class="meta">Bloomsbury • 2026</p>
+            <p style="margin-top:10px;"><b>The surprising story of how corporate scandals - from Enron to the Facebook privacy scandal - change the way the world works for the better.</b></p>
 
-        <p style="margin-top:10px;">
-        <p>  <b>The surprising story of how corporate scandals - from Enron to the Facebook privacy scandal - change the way the world works for the better.</b></p>
+            <p>
+              Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion to show us how scandals can ignite a public with few political outlets for their discontent...
+            </p>
 
-Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion to show us how scandals can ignite a public with few political outlets for their discontent. Scandals don't simply dominate news cycles: they can provoke us to demand better policy, spurring governments to adopt rules that protect us from massive corporations run amok.
-
-Today it is giant companies, not governments, who run the world. They launch rockets into space, control satellite communication and develop era-defining AI technologies. But around the globe, these corporate titans are facing increasing public hostility.
-
-Tech giants are seen as promoting misinformation, undermining democracy and violating our privacy. Big banks, reeling since the financial crisis of 2008, continue to be racked with major scandals. Drawing on real-life examples such as the powdered milk scandal that rocked France, the VW scandal in Germany, the Goldman Sachs scandal in the United States, Cambridge Analytica in Britain and Samsung in South Korea - the authors show that these scandals are not just symptoms of a careless corporate elite, they are opportunities for real political change.
-
-Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be channelled into a backlash that has the potential to reinvigorate our failing democracies. One corporate scandal at a time.
-        </p>
-
-        <div class="btnrow">
-          <a class="btn" href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106" target="_blank">Buy</a>
-          <a class="btn" href="https://www.bloomsbury.com/uk/billionaire-backlash-9781399424110/" target="_blank">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<h3 style="margin:24px 0 12px;">Other Work</h3>
-
-<div class="grid">
-
-  <div class="card">
-    <div class="book-small">
-      <img class="cover small" src="./assets/quietpolitics.jpg" alt="Cover of Quiet Politics and Business Power">
-      <div>
-        <strong>Quiet Politics and Business Power: Corporate Control in Europe and Japan</strong>
-        <p class="meta">Cambridge University Press • 2012</p>
-
-        <div class="btnrow">
-          <a class="btn"
-             href="https://www.amazon.com/Quiet-Politics-Business-Power-Comparative/dp/0521134137/"
-             target="_blank"
-             rel="noopener">
-            Buy
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="book-small">
-      <img class="cover small" src="./assets/changing_france.jpg" alt="Cover of Changing France">
-      <div>
-        <strong>Changing France: The Politics that Markets Make</strong>
-        <p class="meta">Palgrave Macmillan • 2008</p>
-
-        <div class="btnrow">
-          <a class="btn"
-             href="https://www.amazon.com/Changing-France-Politics-Markets-Society/dp/0230204473/ref=sr_1_1?ie=UTF8&s=books&qid=1213286025&sr=1-1"
-             target="_blank"
-             rel="noopener">
-            Buy
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="book-small">
-      <img class="cover small" src="./assets/states_capital.jpg" alt="Cover of Creating Cooperation">
-      <div>
-        <strong>Creating Cooperation: How States Develop Human Capital in Europe</strong>
-        <p class="meta">Cornell Studies in Political Economy • 2002</p>
-
-        <div class="btnrow">
-          <a class="btn"
-             href="https://www.amazon.com/exec/obidos/tg/detail/-/0801440696/102-3824361-2324144?v=glance"
-             target="_blank"
-             rel="noopener">
-            Buy
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="book-small">
-      <img class="cover small" src="./assets/german_skills.jpg" alt="Cover of The German Skills Machine">
-      <div>
-        <strong>The German Skills Machine: Sustaining Comparative Advantage in a Global Economy</strong>
-        <p class="meta">Berghahn Books • 1999</p>
-
-        <div class="btnrow">
-          <a class="btn"
-             href="https://www.amazon.com/German-Skills-Machine-Comparative-Institutions/dp/1571811443/ref=ed_oe_h"
-             target="_blank"
-             rel="noopener">
-            Buy
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-
-</section>
-
-
-    <section id="articles">
-      <h2>Selected Articles</h2>
-      <div class="card">
-       <ul class="list">
-  <li>
-    <a href="https://journals.sagepub.com/doi/abs/10.1177/00104140241252072" target="_blank" rel="noopener">
-      “The economy is rigged”: inequality narratives, fairness, and support for redistribution in six countries
-    </a>
-    <span class="meta">
-      — Comparative Political Studies, 2025
-    </span>
-  </li>
-
-  <li>
-    <a href="https://www.cambridge.org/core/journals/political-science-research-and-methods/article/media-effects-revisited-corporate-scandals-partisan-narratives-and-attitudes-toward-cryptocurrency-regulation/3E115E475EBCD127849D4B01C0CE24BA" target="_blank" rel="noopener">
-      Media effects revisited: corporate scandals, partisan narratives, and attitudes toward cryptocurrency regulation
-    </a>
-    <span class="meta">
-      — Political Science Research and Methods, 2025
-    </span>
-  </li>
-
-  <li>
-    <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ajps.12752" target="_blank" rel="noopener">
-      Banklash: How media coverage of bank scandals moves mass preferences on financial regulation
-    </a>
-    <span class="meta">
-      — American Journal of Political Science, 2024
-    </span>
-  </li>
-</ul>
-<div class="btnrow" style="margin-top:14px;">
-  <a class="btn" href="publications.html">
-    See all publications
-  </a>
-</div>
-
-      </div>
-    </section>
-
-
-    <section id="media">
-  <h2>In the Media</h2>
-  <div class="card">
-    <ul class="list">
-      <li>
-        <a href="https://www.telegraph.co.uk/business/2025/03/17/trump-targets-lawyers-in-attempt-to-silence-critics/" target="_blank" rel="noopener">Trump targets lawyers in ‘chilling’ attempt to silence critics</a>
-        <span class="meta">— The Telegraph, 2025</span>
-      </li>
-      <li>
-        <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/unitedhealth-group-ceo-andrew-witty-says-healthcare-system-is-flawed-2024-12-13/?utm_source=hootsuite&utm_medium=&utm_term=&utm_content=&utm_campaign=" target="_blank" rel="noopener">Suspect in UnitedHealth executive murder was not a customer of the insurer</a>
-        <span class="meta">— Reuters, 2024</span>
-      </li>
-      <li>
-        <a href="https://www.ft.com/content/6a61757f-8352-4102-897d-4b319b42ea63" target="_blank" rel="noopener">Does the American dream foster inequality?</a>
-        <span class="meta">— Financial Times, 2023</span>
-      </li>
-    </ul>
-  </div>
-</section>
-
-
-    <section id="subscribe">
-      <h2>Subscribe</h2>
-      <div class="card">
-        <p>Paste a newsletter link here (Substack?)</p>
-        <div class="btnrow">
-          <a class="btn" href="#" target="_blank" rel="noopener">Join the newsletter</a>
+            <div class="btnrow">
+              <a class="btn" href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106" target="_blank" rel="noopener">Buy</a>
+              <a class="btn" href="https://www.bloomsbury.com/uk/billionaire-backlash-9781399424110/" target="_blank" rel="noopener">Learn more</a>
+              <a class="btn" href="other-work.html">See other books</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p><strong>Media / speaking:</strong> <a href="mailto:someone@example.com">Pepper.Culpepper@bsg.ox.ac.uk</a></p>
-        <p><strong>Social:</strong> <a href="https://bsky.app/profile/pculpepper.bsky.social" target="_blank" rel="noopener">Bluesky</a> · <a href="https://x.com/PepperCulpepper" target="_blank" rel="noopener">X</a> · <a href="https://www.bsg.ox.ac.uk/people/pepper-culpepper" target="_blank" rel="noopener">Other Website</a></p>
+    <section>
+      <h2>Research & Commentary</h2>
+
+      <div class="twocol">
+        <div class="card">
+          <h3 style="margin:0 0 10px;">Selected Articles</h3>
+          <ul class="list">
+            <li>
+              <a href="https://journals.sagepub.com/doi/abs/10.1177/00104140241252072" target="_blank" rel="noopener">
+                “The economy is rigged”: inequality narratives, fairness, and support for redistribution in six countries
+              </a>
+              <div class="meta">Comparative Political Studies, 2025</div>
+            </li>
+            <li>
+              <a href="https://www.cambridge.org/core/journals/political-science-research-and-methods/article/media-effects-revisited-corporate-scandals-partisan-narratives-and-attitudes-toward-cryptocurrency-regulation/3E115E475EBCD127849D4B01C0CE24BA" target="_blank" rel="noopener">
+                Media effects revisited: corporate scandals, partisan narratives, and attitudes toward cryptocurrency regulation
+              </a>
+              <div class="meta">Political Science Research and Methods, 2025</div>
+            </li>
+            <li>
+              <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ajps.12752" target="_blank" rel="noopener">
+                Banklash: How media coverage of bank scandals moves mass preferences on financial regulation
+              </a>
+              <div class="meta">American Journal of Political Science, 2024</div>
+            </li>
+          </ul>
+
+          <div class="btnrow" style="margin-top:14px;">
+            <a class="btn" href="publications.html">See all publications</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px;">In the Media</h3>
+          <ul class="list">
+            <li>
+              <a href="https://www.telegraph.co.uk/business/2025/03/17/trump-targets-lawyers-in-attempt-to-silence-critics/" target="_blank" rel="noopener">
+                Trump targets lawyers in ‘chilling’ attempt to silence critics
+              </a>
+              <div class="meta">The Telegraph, 2025</div>
+            </li>
+            <li>
+              <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/unitedhealth-group-ceo-andrew-witty-says-healthcare-system-is-flawed-2024-12-13/" target="_blank" rel="noopener">
+                Suspect in UnitedHealth executive murder was not a customer of the insurer
+              </a>
+              <div class="meta">Reuters, 2024</div>
+            </li>
+            <li>
+              <a href="https://www.ft.com/content/6a61757f-8352-4102-897d-4b319b42ea63" target="_blank" rel="noopener">
+                Does the American dream foster inequality?
+              </a>
+              <div class="meta">Financial Times, 2023</div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
