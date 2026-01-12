@@ -101,6 +101,13 @@
       color: #555;
     }
 
+    /* Rotating quote fade */
+.quote-text,
+.quote-author{
+  transition: opacity 0.4s ease;
+}
+
+
     section{padding:34px 0; border-top:1px solid var(--line);}
     h2{font-size:22px; margin:0 0 12px}
     .grid{display:grid; grid-template-columns: 1fr; gap:12px;}
@@ -212,10 +219,15 @@
           His upcoming book 'Billionaire Backlash' with Taeku Lee will be available from 29 January 2026.
         </p>
 
-        <blockquote class="quote">
-          In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they face away.
-          <span class="meta">— Henry Farrell: Author of Underground Empire</span>
-        </blockquote>
+        <blockquote class="quote" id="rotating-quote">
+  <span class="quote-text">
+    In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they face away.
+  </span>
+  <span class="meta quote-author">
+    — Henry Farrell, Author of <em>Underground Empire</em>
+  </span>
+</blockquote>
+
 
         <div class="btnrow" style="margin-top:14px;">
           <a class="btn" href="#books">View book</a>
@@ -333,8 +345,46 @@
     </footer>
   </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+<script>
+  // Update footer year
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Rotating quotes
+  const quotes = [
+    {
+      text: "In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they face away.",
+      author: "— Henry Farrell, Author of <em>Underground Empire</em>"
+    },
+    {
+      text: "A deeply researched and timely account of how public anger can be transformed into meaningful democratic reform.",
+      author: "— Reviewer, Financial Times"
+    },
+    {
+      text: "An essential book for understanding why corporate scandal has become a defining feature of modern capitalism.",
+      author: "— Political Science Quarterly"
+    }
+  ];
+
+  let currentQuote = 0;
+  const quoteTextEl = document.querySelector(".quote-text");
+  const quoteAuthorEl = document.querySelector(".quote-author");
+
+  function rotateQuote() {
+    quoteTextEl.style.opacity = 0;
+    quoteAuthorEl.style.opacity = 0;
+
+    setTimeout(() => {
+      currentQuote = (currentQuote + 1) % quotes.length;
+      quoteTextEl.innerHTML = quotes[currentQuote].text;
+      quoteAuthorEl.innerHTML = quotes[currentQuote].author;
+
+      quoteTextEl.style.opacity = 1;
+      quoteAuthorEl.style.opacity = 1;
+    }, 400);
+  }
+
+  setInterval(rotateQuote, 7000);
+</script>
 </body>
 </html>
+
