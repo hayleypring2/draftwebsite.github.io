@@ -23,6 +23,29 @@
     .card{border:1px solid var(--line); border-radius:14px; padding:16px; background:#fff;}
     .meta{color:var(--muted); font-size:14px; margin:6px 0 0}
     footer{padding:28px 0; color:var(--muted); font-size:14px; border-top:1px solid var(--line);}
+
+    /* CONTACT LAYOUT */
+.contact-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:24px;
+  align-items:start;
+}
+
+.contact-photo img{
+  width:100%;
+  max-width:260px;
+  border-radius:12px;
+  border:1px solid var(--line);
+}
+
+@media (min-width: 820px){
+  .contact-grid{
+    grid-template-columns: 260px 1fr;
+  }
+}
+
+    
   </style>
 </head>
 <body>
@@ -43,15 +66,35 @@
   <main class="wrap">
     <section>
       <h1>Contact</h1>
-      <div class="card">
-        <p><strong>Media / speaking:</strong> <a href="mailto:Pepper.Culpepper@bsg.ox.ac.uk">Pepper.Culpepper@bsg.ox.ac.uk</a></p>
-        <p><strong>Social:</strong>
-          <a href="https://bsky.app/profile/pculpepper.bsky.social" target="_blank" rel="noopener">Bluesky</a> ·
-          <a href="https://x.com/PepperCulpepper" target="_blank" rel="noopener">X</a> ·
-          <a href="https://www.bsg.ox.ac.uk/people/pepper-culpepper" target="_blank" rel="noopener">Other Website</a>
-        </p>
-        <p class="meta">Oxford, UK</p>
-      </div>
+     <div class="card">
+  <div class="contact-grid">
+
+    <!-- PHOTO -->
+    <div class="contact-photo">
+      <img src="./assets/pepper_contact.jpg" alt="Pepper Culpepper portrait">
+    </div>
+
+    <!-- DETAILS -->
+    <div>
+      <p>
+        <strong>Address</strong><br>
+        Blavatnik School of Government<br>
+        University of Oxford<br>
+        Oxford OX2 6GG<br>
+        United Kingdom
+      </p>
+
+      <p style="margin-top:16px;">
+        <strong>Email</strong><br>
+        <a href="mailto:Pepper.Culpepper@bsg.ox.ac.uk">
+          Pepper.Culpepper@bsg.ox.ac.uk
+        </a>
+      </p>
+    </div>
+
+  </div>
+</div>
+
     </section>
 
     <footer>
