@@ -6,9 +6,11 @@
   <title>Pepper Culpepper</title>
   <meta name="description" content="Official author website: books, articles, and contact.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+
 
   <style>
     :root{
@@ -22,13 +24,14 @@
       --accent-soft: #e9f0f8;
     }
     *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.55;
-    }
+  body{
+  margin:0;
+  font-family: 'Source Sans 3', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.55;
+}
+
     a{color:var(--accent)}
     a:hover{opacity:0.85}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
@@ -89,7 +92,21 @@
     /* END HERO BANNER */
 
     .kicker{color:var(--muted); font-size:14px; margin:0 0 8px}
-    h1{font-size:40px; line-height:1.12; margin:0 0 10px}
+
+    h1{
+  font-size:40px;
+  line-height:1.12;
+  margin:0 0 10px;
+}
+
+/* Homepage name styling */
+.hero h1{
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  color: #f3efe6; /* warm off-white / beige */
+  letter-spacing: 0.2px;
+}
+
     .sub{color:var(--muted); margin:0; max-width:70ch}
     .hero-grid{display:grid; gap:18px; align-items:start;}
     .hero-photo img{width:100%; height:auto; display:block; border-radius:12px;}
@@ -127,6 +144,13 @@
       padding:16px;
       background:#ffffff;
     }
+
+    /* Ensure section headings use the body font */
+h2, h3{
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+}
+
 
     /* BOOK STYLES */
     .featured-book{padding:18px}
