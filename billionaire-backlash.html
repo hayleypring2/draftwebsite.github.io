@@ -53,6 +53,40 @@
       .book-hero{grid-template-columns: 420px 1fr;}
       .grid{grid-template-columns:1fr 1fr;}
     }
+
+    /* ===== Billionaire Backlash page: cardless layout ===== */
+
+/* Remove boxed feeling from sections */
+section{
+  border-top: none;
+}
+
+/* Book hero image: no box */
+.book-banner{
+  border: none;
+  border-radius: 0;
+}
+
+/* Remove any leftover card styling if present */
+.card{
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+/* Quotes / praise: no boxes */
+.praise-quote{
+  border-left: 4px solid var(--line);
+  padding-left: 16px;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* Lists without boxes */
+.simple-list{
+  padding-left: 18px;
+}
+
   </style>
 </head>
 
@@ -83,9 +117,31 @@
           <h1>Billionaire Backlash</h1>
           <p class="meta">Pepper Culpepper & Taeku Lee • Bloomsbury • 29 January 2026</p>
 
-          <p style="margin-top:12px;">
-            <strong>The age of corporate scandal — and how it could save democracy.</strong>
-          </p>
+         <p style="margin-top:12px;">
+  <strong>The age of corporate scandal — and how it could save democracy.</strong>
+</p>
+
+<div class="book-desc">
+  <p>
+   <b>  The surprising story of how corporate scandals - from Enron to the Facebook privacy scandal - change the way the world works for the better.</b>
+  </p>
+    <p>
+Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion to show us how scandals can ignite a public with few political outlets for their discontent. Scandals don't simply dominate news cycles: they can provoke us to demand better policy, spurring governments to adopt rules that protect us from massive corporations run amok.
+   </p>
+  <p>
+Today it is giant companies, not governments, who run the world. They launch rockets into space, control satellite communication and develop era-defining AI technologies. But around the globe, these corporate titans are facing increasing public hostility.
+ </p>
+   <p>
+Tech giants are seen as promoting misinformation, undermining democracy and violating our privacy. Big banks, reeling since the financial crisis of 2008, continue to be racked with major scandals. Drawing on real-life examples such as the powdered milk scandal that rocked France, the VW scandal in Germany, the Goldman Sachs scandal in the United States, Cambridge Analytica in Britain and Samsung in South Korea - the authors show that these scandals are not just symptoms of a careless corporate elite, they are opportunities for real political change.
+ </p>
+   <p>
+Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be channelled into a backlash that has the potential to reinvigorate our failing democracies. One corporate scandal at a time.
+   </p>
+    <p>
+    From Enron to Cambridge Analytica, they argue that corporate scandals aren’t just symptoms of elite impunity: under the right conditions, they can become rare moments when citizens regain leverage over powerful firms and revive democratic accountability.
+  </p>
+</div>
+
 
           <div class="btnrow">
             <a class="btn primary" href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106" target="_blank" rel="noopener">Buy</a>
@@ -96,35 +152,97 @@
     </section>
 
     <section>
-      <h2>Praise</h2>
-      <div class="grid">
-        <div class="quote">
-          Few books are fun to read while suggesting credible ways of addressing urgent global problems…
-          <div class="meta">— Paul Collier, author of <em>The Future of Capitalism</em></div>
-        </div>
+  <h2>Praise</h2>
 
-        <div class="quote">
-          In an age of increasing corruption, Culpepper and Lee provide a valuable explanation…
-          <div class="meta">— Henry Farrell, author of <em>Underground Empire</em></div>
-        </div>
-      </div>
-    </section>
+  <div class="praise-rotator">
+    <blockquote class="praise-quote">
+      <span class="praise-text">
+        Few books are fun to read while suggesting credible ways of addressing urgent global problems: <em>Billionaire Backlash</em> does just that…
+      </span>
+      <span class="praise-meta praise-author">
+        — Paul Collier, author of <em>The Future of Capitalism</em>
+      </span>
+    </blockquote>
 
-    <section>
-      <h2>Press & Reviews</h2>
-      <div class="card">
-        <ul class="clean">
-          <li><a href="#" target="_blank" rel="noopener">Financial Times</a> <span class="meta">— Review, 2026</span></li>
-          <li><a href="#" target="_blank" rel="noopener">The Guardian</a> <span class="meta">— Interview, 2026</span></li>
-          <li><a href="#" target="_blank" rel="noopener">Podcast / Radio</a> <span class="meta">— Episode, 2026</span></li>
-        </ul>
-      </div>
-    </section>
+    <div class="praise-controls">
+      <button class="btn" id="praise-prev" type="button">← Previous</button>
+      <button class="btn" id="praise-next" type="button">Next →</button>
+    </div>
+  </div>
+</section>
+
 
     <section>
-      <h2>Events</h2>
-      <div class="card">
-        <ul class="clean">
-          <li><strong>Book launch event</strong> <span class="meta">— Oxford, 2026</span> <a href="#" target="_blank" rel="noopener">Details</a></li>
-          <li><strong>Talk / lecture</strong> <span class="meta">— London, 2026</span> <a href="#" target="_blank" rel="noopener">Register</a></li>_
+  <h2>Press & Reviews</h2>
+  <ul class="simple-list">
+    <li><a href="#" target="_blank" rel="noopener">Financial Times</a> <span class="meta">— Review, 2026</span></li>
+    <li><a href="#" target="_blank" rel="noopener">The Guardian</a> <span class="meta">— Interview, 2026</span></li>
+    <li><a href="#" target="_blank" rel="noopener">Podcast / Radio</a> <span class="meta">— Episode, 2026</span></li>
+  </ul>
+</section>
+
+
+   <section>
+  <h2>Upcoming Events</h2>
+  <ul class="simple-list">
+    <li><strong>Book launch event</strong> <span class="meta">— Oxford, 2026</span> <a href="#" target="_blank" rel="noopener">Details</a></li>
+    <li><strong>Talk / lecture</strong> <span class="meta">— London, 2026</span> <a href="#" target="_blank" rel="noopener">Register</a></li>
+  </ul>
+</section>
+
+
+      </main>
+
+  <footer>
+    © <span id="y"></span> Pepper Culpepper. All rights reserved.
+  </footer>
+
+  <script>
+    // footer year
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Praise rotator
+    const praise = [
+      {
+        text: `Few books are fun to read while suggesting credible ways of addressing urgent global problems: <em>Billionaire Backlash</em> does just that. It zeroes in on the Silicon Valley tycoons who have amassed unparallelled power over our lives.`,
+        author: `— Paul Collier, author of <em>The Future of Capitalism</em>`
+      },
+      {
+        text: `In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they fade away.`,
+        author: `— Henry Farrell, author of <em>Underground Empire</em>`
+      },
+      {
+        text: `In an age of democratic crisis, <em>Billionaire Backlash</em> shows how corporate scandals can create unexpected opportunities for renewal—revealing how citizens can still regain the power to make the rules.`,
+        author: `— Margrethe Vestager, former EU Commissioner`
+      }
+    ];
+
+    let praiseIndex = 0;
+    const textEl = document.querySelector(".praise-text");
+    const authorEl = document.querySelector(".praise-author");
+
+    function renderPraise(i){
+      textEl.style.opacity = 0;
+      authorEl.style.opacity = 0;
+
+      setTimeout(() => {
+        textEl.innerHTML = praise[i].text;
+        authorEl.innerHTML = praise[i].author;
+        textEl.style.opacity = 1;
+        authorEl.style.opacity = 1;
+      }, 250);
+    }
+
+    document.getElementById("praise-next").addEventListener("click", () => {
+      praiseIndex = (praiseIndex + 1) % praise.length;
+      renderPraise(praiseIndex);
+    });
+
+    document.getElementById("praise-prev").addEventListener("click", () => {
+      praiseIndex = (praiseIndex - 1 + praise.length) % praise.length;
+      renderPraise(praiseIndex);
+    });
+  </script>
+</body>
+</html>
 
