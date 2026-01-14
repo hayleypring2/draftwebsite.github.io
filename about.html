@@ -1,10 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About • Pepper Culpepper</title>
   <meta name="description" content="About Pepper Culpepper">
+
+  <!-- Fonts (match homepage style if you want) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -19,14 +24,15 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      font-family:'Source Sans 3', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       color:var(--text);
       background:var(--bg);
-      line-height:1.55;
+      line-height:1.65;
     }
     a{color:var(--accent)}
     a:hover{opacity:0.85}
     .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
+
     header{
       position: sticky; top: 0;
       background: rgba(247,248,250,0.95);
@@ -38,25 +44,85 @@
       display:flex; align-items:center; justify-content:space-between;
       gap:16px; padding:14px 0;
     }
-    .brand{font-weight:700; text-decoration:none;}
+    .brand{font-weight:700; text-decoration:none; color:inherit;}
     .navlinks{display:flex; flex-wrap:wrap; gap:14px; font-size:14px;}
     .navlinks a{ text-decoration:none; color:var(--muted); }
     .navlinks a:hover{ color:var(--text); }
 
     section{padding:34px 0;}
-    h1{font-size:34px; margin:22px 0 10px}
-    .card{
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:16px;
-      background:#ffffff;
+    h1{
+      font-size:38px;
+      margin:0 0 10px;
+      font-family:'Libre Baskerville', Georgia, 'Times New Roman', serif;
+      letter-spacing: 0.2px;
     }
     .meta{color:var(--muted); font-size:14px; margin-top:10px}
+
+    /* ===== About hero ===== */
+    .about-hero{
+      border-top: none;
+      padding-top: 22px;
+    }
+
+    /* Optional banner background */
+    .about-banner{
+      border-radius: 18px;
+      padding: 28px 0;
+      background:
+        linear-gradient(rgba(247,248,250,0.75), rgba(247,248,250,0.92)),
+        url("./assets/bsg_image1.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      align-items: start;
+      margin-top: 18px;
+    }
+
+    .about-photo img{
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      display:block;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+
+    .about-text{
+      max-width: 75ch;
+      font-size: 1.05rem;
+    }
+
+    .about-kicker{
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 10px;
+    }
+
+    /* Subtle section divider (not a card) */
+    .rule{
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 26px 0;
+    }
+
     footer{
       padding:28px 0;
       color:var(--muted);
       font-size:14px;
       border-top:1px solid var(--line);
+    }
+
+    @media (min-width: 820px){
+      .about-grid{
+        grid-template-columns: 320px 1fr;
+        gap: 34px;
+      }
+      h1{ font-size: 44px; }
     }
   </style>
 </head>
@@ -69,7 +135,7 @@
         <div class="navlinks">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-           <a href="billionaire-backlash.html">Billionaire Backlash</a>
+          <a href="billionaire-backlash.html">Billionaire Backlash</a>
           <a href="publications.html">Articles</a>
           <a href="other-work.html">Books</a>
           <a href="contact.html">Contact</a>
@@ -79,27 +145,47 @@
   </header>
 
   <main class="wrap">
-    <section>
-      <h1>About</h1>
+    <section class="about-hero">
+      <div class="about-banner">
+        <div class="wrap">
+          <p class="about-kicker">Blavatnik Professor of Government and Public Policy • University of Oxford</p>
+          <h1>About</h1>
+        </div>
+      </div>
 
-      <div class="card">
-        <p>
-          Prior to coming to the Blavatnik School, Pepper Culpepper taught at the European University Institute and at the Harvard Kennedy School. His book <em>Quiet Politics and Business Power: Corporate Control in Europe and Japan</em> (Cambridge University Press, 2011) was awarded the 2012 Stein Rokkan Prize for Comparative Social Science Research.
-        </p>
+      <div class="about-grid">
+        <div class="about-photo">
+          <!-- Use the same photo as homepage, or a new one -->
+          <img src="./assets/author.jpg" alt="Pepper Culpepper portrait">
+          <p class="meta">Photo credit: Blavatnik School of Government</p>
+        </div>
 
-        <p>
-          He is the author of <em>Creating Cooperation</em> (Cornell University Press, 2003) and co-editor of <em>Changing France</em> (with Peter Hall and Bruno Palier, Palgrave, 2006) and <em>The German Skills Machine</em> (with David Finegold, Berghahn Books, 1999).
-        </p>
+        <div class="about-text">
+          <p>
+            Prior to coming to the Blavatnik School, Pepper Culpepper taught at the European University Institute and at the Harvard Kennedy School. His book
+            <em>Quiet Politics and Business Power: Corporate Control in Europe and Japan</em>
+            (Cambridge University Press, 2011) was awarded the 2012 Stein Rokkan Prize for Comparative Social Science Research.
+          </p>
 
-        <p>
-          His work has appeared in <em>Comparative Political Studies</em>, <em>International Organization</em>, <em>Politics & Society</em>, <em>Socio-Economic Review</em>, <em>World Politics</em>, <em>West European Politics</em>, and other leading journals.
-        </p>
+          <p>
+            He is the author of <em>Creating Cooperation</em> (Cornell University Press, 2003) and co-editor of <em>Changing France</em>
+            (with Peter Hall and Bruno Palier, Palgrave, 2006) and <em>The German Skills Machine</em> (with David Finegold, Berghahn Books, 1999).
+          </p>
 
-        <p>
-          He has published commentary in the <em>Washington Post</em>, <em>Le Monde</em>, <em>International Herald Tribune</em>, and <em>The New Republic</em>. A former Marshall Scholar at the University of Oxford, he has held long-term visiting appointments in France, Germany, and Japan.
-        </p>
+          <p>
+            His work has appeared in <em>Comparative Political Studies</em>, <em>International Organization</em>, <em>Politics & Society</em>,
+            <em>Socio-Economic Review</em>, <em>World Politics</em>, <em>West European Politics</em>, and other leading journals.
+          </p>
 
-        <p class="meta">Oxford, UK</p>
+          <p>
+            He has published commentary in the <em>Washington Post</em>, <em>Le Monde</em>, <em>International Herald Tribune</em>, and <em>The New Republic</em>.
+            A former Marshall Scholar at the University of Oxford, he has held long-term visiting appointments in France, Germany, and Japan.
+          </p>
+
+          <hr class="rule">
+
+          <p class="meta">Oxford, UK</p>
+        </div>
       </div>
     </section>
 
@@ -113,4 +199,3 @@
   </script>
 </body>
 </html>
-
