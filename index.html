@@ -136,6 +136,43 @@
       color: #555;
     }
 
+    /* start of new chunk - delete if it looks crazy */
+
+    /* Quote bubble styling */
+.hero .quote{
+  position: relative;
+  border-left: none;                 /* remove the left stripe */
+  border-radius: 18px;
+  background: rgba(255,255,255,0.95);
+  padding: 18px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+/* Little “tail” */
+.hero .quote::after{
+  content: "";
+  position: absolute;
+  left: 34px;                       /* move tail left/right */
+  top: -10px;                       /* puts tail on top edge */
+  width: 18px;
+  height: 18px;
+  background: rgba(255,255,255,0.95);
+  transform: rotate(45deg);
+  border-radius: 4px;
+  box-shadow: -6px -6px 18px rgba(0,0,0,0.06);
+}
+
+/* Optional: make the author line look like a caption */
+.hero .quote .meta{
+  margin-top: 10px;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: rgba(0,0,0,0.65);
+}
+
+/* end of new chunk - note here for hayley to delete if this looks weird */
+
+    
     /* Keep spans block-level for stable layout */
     #rotating-quote .quote-text,
     #rotating-quote .quote-author{
