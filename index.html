@@ -81,7 +81,7 @@ body{
         linear-gradient(rgba(10,20,30,0.70), rgba(10,20,30,0.35)),
         url("./assets/bsg_image1.jpg");
       background-size: cover;
-      background-position: center;
+      background-position: center top;
       color: #fff;
     }
     .hero .kicker,
@@ -237,9 +237,9 @@ h2, h3{
     align-items: start;
   }
 
-  /* Lock hero height so background doesn’t “breathe” */
-  .hero-grid > div:last-child{
-    min-height: 520px; /* tweak 480–560 */
+  /* IMPORTANT: lock the hero height so the background image doesn’t re-crop */
+  .hero{
+    min-height: 560px; /* tweak 520–620 */
   }
 }
 
