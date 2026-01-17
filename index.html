@@ -237,11 +237,37 @@ h2, h3{
     align-items: start;
   }
 
-  /* IMPORTANT: lock the hero height so the background image doesn’t re-crop */
+  /* LOCK the hero so the background never re-crops */
   .hero{
-    min-height: 560px; /* tweak 520–620 */
+    height: 560px;          /* tweak 520–620 */
+  }
+
+  /* Make the grid fill that fixed hero height */
+  .hero-grid{
+    height: 100%;
+    align-items: stretch;
+  }
+
+  /* Right column becomes a vertical layout that fills height */
+  .hero-grid > div:last-child{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+  }
+
+  /* Push quote + buttons toward the bottom (looks intentional) */
+  #rotating-quote{
+    margin-top: auto;
+  }
+
+  /* Safety: if someone adds a super long quote later, don’t break layout */
+  #rotating-quote{
+    max-height: 220px;      /* tweak 180–260 */
+    overflow: auto;
   }
 }
+
 
 
 
