@@ -138,6 +138,19 @@ body{
       color: #555;
     }
 
+
+    /* Prevent layout shift when quote changes */
+#rotating-quote{
+  min-height: 170px; /* adjust until the longest quote fits */
+}
+
+/* Optional: keep it feeling stable */
+#rotating-quote .quote-text,
+#rotating-quote .quote-author{
+  display: block;
+}
+
+
     /* Rotating quote fade */
 .quote-text,
 .quote-author{
