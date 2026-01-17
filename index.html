@@ -6,12 +6,10 @@
   <title>Pepper Culpepper</title>
   <meta name="description" content="Official author website: books, articles, and contact.">
 
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -25,15 +23,18 @@
       --accent-soft: #e9f0f8;
     }
     *{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: 'Spectral', Georgia, 'Times New Roman', serif;
-  font-weight: 400;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.65; /* slightly looser for serif */
-}
 
+    /* Prevent page width "jump" if scrollbar appears/disappears */
+    html{ overflow-y: scroll; }
+
+    body{
+      margin:0;
+      font-family: 'Spectral', Georgia, 'Times New Roman', serif;
+      font-weight: 400;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+    }
 
     a{color:var(--accent)}
     a:hover{opacity:0.85}
@@ -54,21 +55,19 @@ body{
     .navlinks a{ text-decoration:none; color:var(--muted); }
     .navlinks a:hover{ color:var(--text); }
 
-.social-icon{
-  color: #0a7cff; /* Bluesky blue */
-  display:flex;
-  align-items:center;
-}
-
-.social-icon:hover{
-  color: #055fd1; /* darker blue on hover */
-}
+    .social-icon{
+      color: #0a7cff;
+      display:flex;
+      align-items:center;
+    }
+    .social-icon:hover{
+      color: #055fd1;
+    }
 
     .brandwrap{
-  font-weight:700;
-  letter-spacing:0.2px;
-}
-
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
 
     /* HERO BANNER */
     .hero{
@@ -103,19 +102,18 @@ body{
     .kicker{color:var(--muted); font-size:14px; margin:0 0 8px}
 
     h1{
-  font-size:40px;
-  line-height:1.12;
-  margin:0 0 10px;
-}
+      font-size:40px;
+      line-height:1.12;
+      margin:0 0 10px;
+    }
 
-/* Homepage name styling */
-.hero h1{
-  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  color: #ffffff; /* or remove entirely if you want default */
-}
-
+    /* Homepage name styling */
+    .hero h1{
+      font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: #ffffff;
+    }
 
     .sub{color:var(--muted); margin:0; max-width:70ch}
     .hero-grid{display:grid; gap:18px; align-items:start;}
@@ -138,22 +136,17 @@ body{
       color: #555;
     }
 
-
-    /* Prevent layout shift when quote changes */
-
-/* Optional: keep it feeling stable */
-#rotating-quote .quote-text,
-#rotating-quote .quote-author{
-  display: block;
-}
-
+    /* Keep spans block-level for stable layout */
+    #rotating-quote .quote-text,
+    #rotating-quote .quote-author{
+      display: block;
+    }
 
     /* Rotating quote fade */
-.quote-text,
-.quote-author{
-  transition: opacity 0.4s ease;
-}
-
+    .quote-text,
+    .quote-author{
+      transition: opacity 0.4s ease;
+    }
 
     section{padding:34px 0; border-top:1px solid var(--line);}
     h2{font-size:22px; margin:0 0 12px}
@@ -166,11 +159,10 @@ body{
     }
 
     /* Ensure section headings use the body font */
-h2, h3{
-  font-family: 'Source Sans 3', sans-serif;
-  font-weight: 600;
-}
-
+    h2, h3{
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 600;
+    }
 
     /* BOOK STYLES */
     .featured-book{padding:18px}
@@ -191,31 +183,24 @@ h2, h3{
 
     .meta{color:var(--muted); font-size:14px; margin:6px 0 0}
     .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
-.btn{
-  display:inline-block;
-  padding:10px 14px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  text-decoration:none;
-  font-size:16px;
-  color:var(--text);
-  background:#fafafa;
-}
-
-.btn.primary{
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
-  padding: 14px 20px;
-}
-
-.btn.primary:hover{
-  opacity: 0.92;
-}
-
-.btn:hover{
-  background:#f2f2f2;
-}
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      text-decoration:none;
+      font-size:16px;
+      color:var(--text);
+      background:#fafafa;
+    }
+    .btn.primary{
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      padding: 14px 20px;
+    }
+    .btn.primary:hover{ opacity: 0.92; }
+    .btn:hover{ background:#f2f2f2; }
 
     .list{margin:0; padding-left:18px}
     footer{padding:28px 0; color:var(--muted); font-size:14px; border-top:1px solid var(--line);}
@@ -226,110 +211,85 @@ h2, h3{
       grid-template-columns: 1fr;
       gap: 12px;
     }
-@media (min-width: 820px){
-  .grid{grid-template-columns: 1fr 1fr;}
-  .book-grid{grid-template-columns: 220px 1fr;}
-  .hero-grid{grid-template-columns: 360px 1fr;}
-  h1{font-size:48px;}
-  .twocol{
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-  }
 
-  /* LOCK the hero so the background never re-crops */
-  .hero{
-    height: 560px;          /* tweak 520–620 */
-  }
+    @media (min-width: 820px){
+      .grid{grid-template-columns: 1fr 1fr;}
+      .book-grid{grid-template-columns: 220px 1fr;}
+      .hero-grid{grid-template-columns: 360px 1fr;}
+      h1{font-size:48px;}
+      .twocol{
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: start;
+      }
 
-  /* Make the grid fill that fixed hero height */
-  .hero-grid{
-    height: 100%;
-    align-items: stretch;
-  }
-
-  /* Right column becomes a vertical layout that fills height */
-  .hero-grid > div:last-child{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    min-height: 0;
-  }
-
-  /* Push quote + buttons toward the bottom (looks intentional) */
-  #rotating-quote{
-    margin-top: auto;
-  }
-
-  /* Safety: if someone adds a super long quote later, don’t break layout */
-  #rotating-quote{
-    max-height: 220px;      /* tweak 180–260 */
-    overflow: auto;
-  }
-}
-
-
-
+      /* Make right column layout fill nicely */
+      .hero-grid{
+        align-items: stretch;
+      }
+      .hero-grid > div:last-child{
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+      }
+      #rotating-quote{
+        margin-top: auto;
+      }
+    }
 
     /* FEATURED BOOK BANNER */
-.book-banner{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 14px;
-  margin-bottom: 18px;
-  border: 1px solid var(--line);
-}
-
-.book-details{
-  max-width: none;
-  width: 100%;
-}
-
-
+    .book-banner{
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      border: 1px solid var(--line);
+    }
+    .book-details{
+      max-width: none;
+      width: 100%;
+    }
   </style>
 </head>
 
 <body>
   <header>
     <div class="wrap">
-  <nav>
-  <!-- Name + Bluesky icon -->
-  <div class="brandwrap" style="display:flex; align-items:center; gap:8px;">
-    <a href="index.html" style="text-decoration:none; color:inherit;">
-      Pepper Culpepper
-    </a>
+      <nav>
+        <!-- Name + Bluesky icon -->
+        <div class="brandwrap" style="display:flex; align-items:center; gap:8px;">
+          <a href="index.html" style="text-decoration:none; color:inherit;">
+            Pepper Culpepper
+          </a>
 
-    <a
-      href="https://bsky.app/profile/pculpepper.bsky.social"
-      target="_blank"
-      rel="noopener"
-      aria-label="Bluesky"
-      class="social-icon"
-    >
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M12 11.388c-.832-1.59-3.1-4.62-5.47-6.296C4.272 3.47 3.178 3.098 2.637 3.33c-.63.27-.744 1.23-.744 1.8 0 .57.312 4.68.516 5.364.684 2.352 3.12 3.15 5.316 2.91-2.19.33-4.14 1.14-3.6 3.744.276 1.29 1.92 4.488 3.516 4.488 1.404 0 3.57-2.13 4.359-3.528.789 1.398 2.955 3.528 4.359 3.528 1.596 0 3.24-3.198 3.516-4.488.54-2.604-1.41-3.414-3.6-3.744 2.196.24 4.632-.558 5.316-2.91.204-.684.516-4.794.516-5.364 0-.57-.114-1.53-.744-1.8-.54-.232-1.635.14-3.894 1.762-2.37 1.676-4.638 4.706-5.47 6.296z"/>
-      </svg>
-    </a>
-  </div>
+          <a
+            href="https://bsky.app/profile/pculpepper.bsky.social"
+            target="_blank"
+            rel="noopener"
+            aria-label="Bluesky"
+            class="social-icon"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 11.388c-.832-1.59-3.1-4.62-5.47-6.296C4.272 3.47 3.178 3.098 2.637 3.33c-.63.27-.744 1.23-.744 1.8 0 .57.312 4.68.516 5.364.684 2.352 3.12 3.15 5.316 2.91-2.19.33-4.14 1.14-3.6 3.744.276 1.29 1.92 4.488 3.516 4.488 1.404 0 3.57-2.13 4.359-3.528.789 1.398 2.955 3.528 4.359 3.528 1.596 0 3.24-3.198 3.516-4.488.54-2.604-1.41-3.414-3.6-3.744 2.196.24 4.632-.558 5.316-2.91.204-.684.516-4.794.516-5.364 0-.57-.114-1.53-.744-1.8-.54-.232-1.635.14-3.894 1.762-2.37 1.676-4.638 4.706-5.47 6.296z"/>
+            </svg>
+          </a>
+        </div>
 
-  <!-- Navigation links -->
-  <div class="navlinks">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-     <a href="billionaire-backlash.html">Billionaire Backlash</a>
-    <a href="publications.html">Articles</a>
-    <a href="other-work.html">Books</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
-
-
+        <!-- Navigation links -->
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="billionaire-backlash.html">Billionaire Backlash</a>
+          <a href="publications.html">Articles</a>
+          <a href="other-work.html">Books</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
     </div>
   </header>
 
   <main class="wrap">
-
     <div class="hero hero-grid">
       <div class="hero-photo card">
         <img src="./assets/author.jpg" alt="Author portrait" />
@@ -346,82 +306,71 @@ h2, h3{
         </p>
 
         <blockquote class="quote" id="rotating-quote">
-  <span class="quote-text">
-    Few books are fun to read while suggesting credible ways of addressing urgent global problems: Billionaire Backlash does just that. It zeroes in on the Silicon Valley tycoons who have amassed unparallelled power over our lives. Through their opaque private companies, they now control essential public services. Through their newspapers and social media, they promote their interests and way-out opinions. Read it: this matters.
-  </span>
-  <span class="meta quote-author">
-    — Paul Collier, author of <em>The Future of Capitalism </em>
-  </span>
-</blockquote>
-
+          <span class="quote-text">
+            Few books are fun to read while suggesting credible ways of addressing urgent global problems: Billionaire Backlash does just that. It zeroes in on the Silicon Valley tycoons who have amassed unparallelled power over our lives. Through their opaque private companies, they now control essential public services. Through their newspapers and social media, they promote their interests and way-out opinions. Read it: this matters.
+          </span>
+          <span class="meta quote-author">
+            — Paul Collier, author of <em>The Future of Capitalism </em>
+          </span>
+        </blockquote>
 
         <div class="btnrow" style="margin-top:14px;">
-  <a class="btn" href="about.html">Learn more</a>
-  <a class="btn" href="contact.html">Contact</a>
-</div>
+          <a class="btn" href="about.html">Learn more</a>
+          <a class="btn" href="contact.html">Contact</a>
+        </div>
       </div>
     </div>
 
+    <section id="books">
+      <h2>Upcoming Release</h2>
 
-<section id="books">
-  <h2>Upcoming Release</h2>
+      <div class="card featured-book">
+        <img
+          class="book-banner"
+          src="./assets/BB_SOCIALS_V2_2.jpg"
+          alt="Billionaire Backlash book banner"
+        >
 
-  <div class="card featured-book">
+        <div class="book-details">
+          <p class="kicker">Upcoming Release: 29 January 2026</p>
 
-    <!-- BIG BANNER IMAGE -->
-    <img
-      class="book-banner"
-      src="./assets/BB_SOCIALS_V2_2.jpg"
-      alt="Billionaire Backlash book banner"
-    >
+          <h3 style="margin:0 0 6px;">
+            Billionaire Backlash: The Age of Corporate Scandal and How it Could Save Democracy
+          </h3>
 
-    <!-- TEXT BELOW IMAGE -->
-    <div class="book-details">
-      <p class="kicker">Upcoming Release: 29 January 2026</p>
+          <p class="meta">Bloomsbury • 2026</p>
 
-      <h3 style="margin:0 0 6px;">
-        Billionaire Backlash: The Age of Corporate Scandal and How it Could Save Democracy
-      </h3>
+          <p style="margin-top:12px;">
+            <strong>
+              The surprising story of how corporate scandals — from Enron to the Facebook privacy scandal —
+              change the way the world works for the better.
+            </strong>
+          </p>
 
-      <p class="meta">Bloomsbury • 2026</p>
+          <p>
+            Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion to show us how scandals can ignite a public with few political outlets for their discontent. Scandals don't simply dominate news cycles: they can provoke us to demand better policy, spurring governments to adopt rules that protect us from massive corporations run amok.
+          </p>
 
-      <p style="margin-top:12px;">
-        <strong>
-          The surprising story of how corporate scandals — from Enron to the Facebook privacy scandal —
-          change the way the world works for the better.
-        </strong>
-      </p>
+          <p>
+            Today it is giant companies, not governments, who run the world. They launch rockets into space, control satellite communication and develop era-defining AI technologies. But around the globe, these corporate titans are facing increasing public hostility.
+          </p>
 
-      <p>
-        Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion to show us how scandals can ignite a public with few political outlets for their discontent. Scandals don't simply dominate news cycles: they can provoke us to demand better policy, spurring governments to adopt rules that protect us from massive corporations run amok.   
-</p>
+          <p>
+            Tech giants are seen as promoting misinformation, undermining democracy and violating our privacy. Big banks, reeling since the financial crisis of 2008, continue to be racked with major scandals. Drawing on real-life examples such as the powdered milk scandal that rocked France, the VW scandal in Germany, the Goldman Sachs scandal in the United States, Cambridge Analytica in Britain and Samsung in South Korea - the authors show that these scandals are not just symptoms of a careless corporate elite, they are opportunities for real political change.
+          </p>
 
-       <p>
-Today it is giant companies, not governments, who run the world. They launch rockets into space, control satellite communication and develop era-defining AI technologies. But around the globe, these corporate titans are facing increasing public hostility.  
-</p>
+          <p>
+            Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be channelled into a backlash that has the potential to reinvigorate our failing democracies. One corporate scandal at a time.
+          </p>
 
-       <p>
-      
-Tech giants are seen as promoting misinformation, undermining democracy and violating our privacy. Big banks, reeling since the financial crisis of 2008, continue to be racked with major scandals. Drawing on real-life examples such as the powdered milk scandal that rocked France, the VW scandal in Germany, the Goldman Sachs scandal in the United States, Cambridge Analytica in Britain and Samsung in South Korea - the authors show that these scandals are not just symptoms of a careless corporate elite, they are opportunities for real political change.  
-</p>
-
-       <p>
-Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be channelled into a backlash that has the potential to reinvigorate our failing democracies. One corporate scandal at a time.
-      </p>
-
-      <div class="btnrow">
-        <a class="btn primary" href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106" target="_blank" rel="noopener">
-  Buy
-</a>
-        <a class="btn" href="billionaire-backlash.html"
- target="_blank" rel="noopener">Learn more</a>
-        <a class="btn" href="other-work.html">See other books</a>
+          <div class="btnrow">
+            <a class="btn primary" href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106" target="_blank" rel="noopener">Buy</a>
+            <a class="btn" href="billionaire-backlash.html" target="_blank" rel="noopener">Learn more</a>
+            <a class="btn" href="other-work.html">See other books</a>
+          </div>
+        </div>
       </div>
-    </div>
-
-  </div>
-</section>
-
+    </section>
 
     <section>
       <h2>Research & Commentary</h2>
@@ -486,46 +435,71 @@ Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be ch
     </footer>
   </main>
 
-<script>
-  // Update footer year
-  document.getElementById("y").textContent = new Date().getFullYear();
+  <script>
+    // Update footer year
+    document.getElementById("y").textContent = new Date().getFullYear();
 
-  // Rotating quotes
-  const quotes = [
-    {
-      text: "Few books are fun to read while suggesting credible ways of addressing urgent global problems: Billionaire Backlash does just that. It zeroes in on the Silicon Valley tycoons who have amassed unparallelled power over our lives. Through their opaque private companies, they now control essential public services. Through their newspapers and social media, they promote their interests and way-out opinions.",
-      author: "— Paul Collier, Author of <em>The Future of Capitalism</em>"
-    },
-    {
-      text: "In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they fade away.",
-      author: "— Henry Farrell, Author of <em>Underground Empire </em>"
-    },
-    {
-      text: "In an age of democratic crisis, Billionaire Backlash shows us how corporate scandals offer unexpected opportunities for societal renewal - revealing how we as citizens can still assume the power to make the rules in modern democracies.Just read it - have fun, get wiser and get out there!",
-      author: "— Margrethe Vestager, former EU Commissioner"
+    // Rotating quotes
+    const quotes = [
+      {
+        text: "Few books are fun to read while suggesting credible ways of addressing urgent global problems: Billionaire Backlash does just that. It zeroes in on the Silicon Valley tycoons who have amassed unparallelled power over our lives. Through their opaque private companies, they now control essential public services. Through their newspapers and social media, they promote their interests and way-out opinions.",
+        author: "— Paul Collier, Author of <em>The Future of Capitalism</em>"
+      },
+      {
+        text: "In an age of increasing corruption, Pepper Culpepper and Taeku Lee provide a valuable explanation of when corporate scandals provoke public fury, and when instead they fade away.",
+        author: "— Henry Farrell, Author of <em>Underground Empire </em>"
+      },
+      {
+        text: "In an age of democratic crisis, Billionaire Backlash shows us how corporate scandals offer unexpected opportunities for societal renewal - revealing how we as citizens can still assume the power to make the rules in modern democracies. Just read it - have fun, get wiser and get out there!",
+        author: "— Margrethe Vestager, former EU Commissioner"
+      }
+    ];
+
+    let currentQuote = 0;
+    const quoteTextEl = document.querySelector(".quote-text");
+    const quoteAuthorEl = document.querySelector(".quote-author");
+    const heroEl = document.querySelector(".hero");
+
+    function lockHeroToTallestQuote() {
+      const originalText = quoteTextEl.innerHTML;
+      const originalAuthor = quoteAuthorEl.innerHTML;
+
+      heroEl.style.minHeight = "";
+
+      let maxH = heroEl.offsetHeight;
+
+      quotes.forEach(q => {
+        quoteTextEl.innerHTML = q.text;
+        quoteAuthorEl.innerHTML = q.author;
+        maxH = Math.max(maxH, heroEl.offsetHeight);
+      });
+
+      quoteTextEl.innerHTML = originalText;
+      quoteAuthorEl.innerHTML = originalAuthor;
+
+      heroEl.style.minHeight = maxH + "px";
     }
-  ];
 
-  let currentQuote = 0;
-  const quoteTextEl = document.querySelector(".quote-text");
-  const quoteAuthorEl = document.querySelector(".quote-author");
+    function rotateQuote() {
+      quoteTextEl.style.opacity = 0;
+      quoteAuthorEl.style.opacity = 0;
 
-  function rotateQuote() {
-    quoteTextEl.style.opacity = 0;
-    quoteAuthorEl.style.opacity = 0;
+      setTimeout(() => {
+        currentQuote = (currentQuote + 1) % quotes.length;
+        quoteTextEl.innerHTML = quotes[currentQuote].text;
+        quoteAuthorEl.innerHTML = quotes[currentQuote].author;
 
-    setTimeout(() => {
-      currentQuote = (currentQuote + 1) % quotes.length;
-      quoteTextEl.innerHTML = quotes[currentQuote].text;
-      quoteAuthorEl.innerHTML = quotes[currentQuote].author;
+        quoteTextEl.style.opacity = 1;
+        quoteAuthorEl.style.opacity = 1;
 
-      quoteTextEl.style.opacity = 1;
-      quoteAuthorEl.style.opacity = 1;
-    }, 400);
-  }
+        lockHeroToTallestQuote();
+      }, 400);
+    }
 
-  setInterval(rotateQuote, 7000);
-</script>
+    window.addEventListener("load", lockHeroToTallestQuote);
+    window.addEventListener("resize", lockHeroToTallestQuote);
+
+    setInterval(rotateQuote, 7000);
+  </script>
 </body>
 </html>
-
