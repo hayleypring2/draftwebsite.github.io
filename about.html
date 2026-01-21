@@ -65,23 +65,20 @@
     }
 
     /* Optional banner background */
-.about-banner{
-  background: url("./assets/nuffield.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 70px 0;   /* controls height */
-  border-radius: 18px;
-}
+    .about-banner{
+      background: url("./assets/nuffield.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 70px 0;   /* controls height */
+      border-radius: 18px;
+    }
 
     .about-banner-inner{
-  background: rgba(247,248,250,0.9);
-  display: inline-block;
-  padding: 18px 28px;
-  border-radius: 14px;
-}
-
-
-
+      background: rgba(247,248,250,0.9);
+      display: inline-block;
+      padding: 18px 28px;
+      border-radius: 14px;
+    }
 
     .about-grid{
       display:grid;
@@ -104,6 +101,13 @@
       max-width: 75ch;
       font-size: 1.05rem;
     }
+
+    /* Typographic emphasis for book titles in About text */
+.about-text strong{
+  font-style: italic;
+  font-weight: 600;
+}
+
 
     .about-kicker{
       color: var(--muted);
@@ -155,43 +159,39 @@
   <main class="wrap">
     <section class="about-hero">
       <div class="about-banner">
-  <div class="about-banner-inner">
-    <p class="about-kicker">
-      Blavatnik Professor of Government and Public Policy • University of Oxford
-    </p>
-    <h1>Pepper Culpepper</h1>
-  </div>
-</div>
-
+        <div class="about-banner-inner">
+          <p class="about-kicker">
+            Blavatnik Professor of Government and Public Policy • University of Oxford
+          </p>
+          <h1>Pepper Culpepper</h1>
+        </div>
       </div>
 
       <div class="about-grid">
         <div class="about-photo">
-          <!-- Use the same photo as homepage, or a new one -->
           <img src="./assets/author.jpg" alt="Pepper Culpepper portrait">
           <p class="meta">Photo credit: Blavatnik School of Government</p>
         </div>
 
         <div class="about-text">
           <p>
-            Prior to coming to the Blavatnik School, Pepper Culpepper taught at the European University Institute and at the Harvard Kennedy School. His book
-            <em>Quiet Politics and Business Power: Corporate Control in Europe and Japan</em>
-            (Cambridge University Press, 2011) was awarded the 2012 Stein Rokkan Prize for Comparative Social Science Research.
+            Pepper Culpepper is Vice-Dean for Academic Affairs and Blavatnik Professor of Government and Public Policy at the Blavatnik School of Government. His research explores the intersection between capitalism and democracy.
           </p>
 
           <p>
-            He is the author of <em>Creating Cooperation</em> (Cornell University Press, 2003) and co-editor of <em>Changing France</em>
-            (with Peter Hall and Bruno Palier, Palgrave, 2006) and <em>The German Skills Machine</em> (with David Finegold, Berghahn Books, 1999).
+            His 2026 book with Taeku Lee – <strong>The Billionaire Backlash: The Age of Corporate Scandal and How It Could Save Democracy</strong> – argues for the positive, and politically popular, role of government regulatory action in an era of populism. The work builds on some of the scholarly insights from his five-year Advanced Grant Project funded by the European Research Council, which sought to understand how big banks and the rules that govern them became objects of political contestation after the Great Financial Crisis of 2008.
           </p>
 
           <p>
-            His work has appeared in <em>Comparative Political Studies</em>, <em>International Organization</em>, <em>Politics & Society</em>,
-            <em>Socio-Economic Review</em>, <em>World Politics</em>, <em>West European Politics</em>, and other leading journals.
+            Pepper’s 2011 book, <strong>Quiet Politics and Business Power</strong> was awarded the Stein Rokkan Prize for Comparative Social Science Research. He is the author of <strong>Creating Cooperation</strong> and co-editor of <strong>Changing France</strong> (with Peter Hall and Bruno Palier) and <strong>The German Skills Machine</strong> (with David Finegold). He has published more than twenty peer-reviewed articles.
           </p>
 
           <p>
-            He has published commentary in the <em>Washington Post</em>, <em>Le Monde</em>, <em>International Herald Tribune</em>, and <em>The New Republic</em>.
-            A former Marshall Scholar at the University of Oxford, he has held long-term visiting appointments in France, Germany, and Japan.
+            His public commentary has appeared in the Conversation, the International Herald Tribune, <em>Le Monde</em>, <em>The New Republic</em>, Times Higher Education, and <em>The Washington Post</em>. A recent article about his research in the <em>Financial Times</em> attracted more than one million Twitter/X views.
+          </p>
+
+          <p>
+            Pepper obtained a PhD in political science from Harvard University, a BA from Duke University, where he graduated summa cum laude, and an MLitt from the University of Oxford, where he was a Marshall Scholar. He has previously taught at the Harvard Kennedy School and the European University Institute in Italy. He was an Abe Fellow at the University of Tokyo and has held long-term visiting appointments in France and Germany.
           </p>
 
           <hr class="rule">
@@ -211,3 +211,4 @@
   </script>
 </body>
 </html>
+
