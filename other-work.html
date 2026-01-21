@@ -5,110 +5,206 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Books • Pepper Culpepper</title>
   <meta name="description" content="Books and edited volumes.">
- <div class="reviews-top">
-  <p class="reviews-highlight">
-    On the
-    <a href="https://www.ft.com/content/5de26a95-b04e-4829-bea3-da9fbcd621fd"
-       target="_blank" rel="noopener">
-      <em>Financial Times</em>
-    </a>
-    list of <strong>What to Read in 2026</strong>
-  </p>
-
-  <p class="reviews-highlight">
-    <em>
-      Two political scientists explore how corporate scandals can spark public outrage and pressure governments to act and push for meaningful political change. Across industries and continents, shared anger at powerful corporations can become a catalyst for reinvigorating democracy.
-    </em>
-  </p>
-</div>
-
-
 
   <style>
-    :root{ --max:980px; --pad:20px; --text:#1f2933; --muted:#5f6c7b; --line:#e7e7e7; --bg:#f7f8fa; --accent:#1f4a7c; }
+    :root{
+      --max:980px;
+      --pad:20px;
+      --text:#1f2933;
+      --muted:#5f6c7b;
+      --line:#e7e7e7;
+      --bg:#f7f8fa;
+      --accent:#1f4a7c;
+    }
+
     *{box-sizing:border-box}
-    body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--text); background:var(--bg); line-height:1.55;}
-    a{color:var(--accent)} a:hover{opacity:0.85}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 var(--pad);}
-    header{ position: sticky; top:0; background: rgba(247,248,250,0.95); backdrop-filter: blur(6px); border-bottom:1px solid var(--line); z-index:10;}
-    nav{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0;}
-    .brand{font-weight:700; text-decoration:none;}
-    .navlinks{display:flex; flex-wrap:wrap; gap:14px; font-size:14px;}
-    .navlinks a{text-decoration:none; color:var(--muted);} .navlinks a:hover{color:var(--text);}
-    section{padding:34px 0;}
-    h1{font-size:34px; margin:22px 0 10px;}
-    h2{font-size:22px; margin:0 0 12px}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+    }
+
+    a{color:var(--accent)}
+    a:hover{opacity:0.85}
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 var(--pad);
+    }
+
+    header{
+      position: sticky;
+      top:0;
+      background: rgba(247,248,250,0.95);
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid var(--line);
+      z-index:10;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 0;
+    }
+
+    .brand{
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .navlinks{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      font-size:14px;
+    }
+
+    .navlinks a{
+      text-decoration:none;
+      color:var(--muted);
+    }
+
+    .navlinks a:hover{
+      color:var(--text);
+    }
+
+    section{padding:34px 0}
+
+    h1{
+      font-size:34px;
+      margin:22px 0 10px;
+    }
+
+    h2{
+      font-size:22px;
+      margin:0 0 12px;
+    }
+
     /* Top-of-page reviews / accolades */
-.reviews-top{
-  padding: 10px 0 18px;   /* creates “space at the top” without a huge banner */
-  text-align: center;
-}
+    .reviews-top{
+      padding: 10px 0 18px;
+      text-align: center;
+    }
 
-.reviews-highlight{
-  max-width: 70ch;
-  margin: 0 auto;
-  font-style: italic;
-  color: var(--muted);
-  font-size: 1.05rem;
-}
+    .reviews-highlight{
+      max-width: 70ch;
+      margin: 0 auto 8px;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
 
-    .card{border:1px solid var(--line); border-radius:14px; padding:16px; background:#fff;}
-    .grid{display:grid; grid-template-columns:1fr; gap:12px;}
-    .book-small{display:grid; grid-template-columns:80px 1fr; gap:12px; align-items:center;}
-    img{display:block; max-width:100%;}
-    .cover{border-radius:12px; border:1px solid var(--line);}
-    .cover.small{width:80px}
-    .meta{color:var(--muted); font-size:14px; margin:6px 0 0}
-    .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+    .card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      background:#fff;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+
+    @media (min-width:820px){
+      .grid{grid-template-columns:1fr 1fr;}
+    }
+
+    .book-small{
+      display:grid;
+      grid-template-columns:80px 1fr;
+      gap:12px;
+      align-items:center;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    .cover{
+      border-radius:12px;
+      border:1px solid var(--line);
+    }
+
+    .cover.small{
+      width:80px;
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:14px;
+      margin:6px 0 0;
+    }
+
+    .btnrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+
     .btn{
-  display:inline-block;
-  padding:10px 14px;
-  border:1px solid var(--line);
-  border-radius:12px;
-  text-decoration:none;
-  font-size:16px; /* match primary button text */
-  color:var(--text);
-  background:#fafafa;
-}
+      display:inline-block;
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      text-decoration:none;
+      font-size:16px;
+      color:var(--text);
+      background:#fafafa;
+    }
 
-    .btn:hover{background:#f2f2f2}
-    footer{padding:28px 0; color:var(--muted); font-size:14px; border-top:1px solid var(--line);}
-    @media (min-width:820px){ .grid{grid-template-columns:1fr 1fr;} }
-
-    /* FEATURED BOOK BANNER */
-.book-banner{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 14px;
-  margin-bottom: 18px;
-  border: 1px solid var(--line);
-}
-
-.book-details{
-  max-width: 70ch;
-}
-
-.featured-book{
-  padding: 18px;
-  margin-bottom: 24px;
-}
+    .btn:hover{
+      background:#f2f2f2;
+    }
 
     .btn.primary{
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
-  font-size: 16px;
-  padding: 14px 20px;
-}
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      padding: 14px 20px;
+    }
 
-.btn.primary:hover{
-  opacity: 0.92;
-}
+    .btn.primary:hover{
+      opacity:0.92;
+    }
 
+    /* Featured book banner */
+    .featured-book{
+      padding:18px;
+      margin-bottom:24px;
+    }
 
+    .book-banner{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:14px;
+      margin-bottom:18px;
+      border:1px solid var(--line);
+    }
+
+    .book-details{
+      max-width:70ch;
+    }
+
+    footer{
+      padding:28px 0;
+      color:var(--muted);
+      font-size:14px;
+      border-top:1px solid var(--line);
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="wrap">
@@ -117,7 +213,7 @@
         <div class="navlinks">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-           <a href="billionaire-backlash.html">Billionaire Backlash</a>
+          <a href="billionaire-backlash.html">Billionaire Backlash</a>
           <a href="publications.html">Articles</a>
           <a href="other-work.html">Books</a>
           <a href="contact.html">Contact</a>
@@ -131,51 +227,71 @@
       <h1>Books</h1>
       <p class="meta">Books and edited volumes.</p>
 
+      <div class="reviews-top">
+        <p class="reviews-highlight">
+          On the
+          <a href="https://www.ft.com/content/5de26a95-b04e-4829-bea3-da9fbcd621fd"
+             target="_blank" rel="noopener">
+            <em>Financial Times</em>
+          </a>
+          list of <strong>What to Read in 2026</strong>
+        </p>
+
+        <p class="reviews-highlight">
+          <em>
+            Two political scientists explore how corporate scandals can spark public outrage and pressure governments to act and push for meaningful political change. Across industries and continents, shared anger at powerful corporations can become a catalyst for reinvigorating democracy.
+          </em>
+        </p>
+      </div>
+
       <!-- UPCOMING RELEASE -->
-<div class="card featured-book">
+      <div class="card featured-book">
+        <img
+          class="book-banner"
+          src="./assets/BB_SOCIALS_V2_2.jpg"
+          alt="Billionaire Backlash book banner"
+        >
 
-  <img
-    class="book-banner"
-    src="./assets/BB_SOCIALS_V2_2.jpg"
-    alt="Billionaire Backlash book banner"
-  >
+        <div class="book-details">
+          <p class="meta">Upcoming Release: January 2026</p>
 
-  <div class="book-details">
-    <p class="kicker">Upcoming Release: January 2026</p>
+          <h2>
+            Billionaire Backlash: The Age of Corporate Scandal and How it Could Save Democracy
+          </h2>
 
-    <h2 style="margin:0 0 6px;">
-      Billionaire Backlash: The Age of Corporate Scandal and How it Could Save Democracy
-    </h2>
+          <p class="meta">Bloomsbury • 2026</p>
 
-    <p class="meta">Bloomsbury • 2026</p>
+          <p style="margin-top:12px;">
+            <strong>
+              The surprising story of how corporate scandals — from Enron to the Facebook privacy scandal —
+              change the way the world works for the better.
+            </strong>
+          </p>
 
-    <p style="margin-top:12px;">
-      <strong>
-        The surprising story of how corporate scandals — from Enron to the Facebook privacy scandal —
-        change the way the world works for the better.
-      </strong>
-    </p>
+          <p>
+            Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion
+            to show how scandals can ignite public backlash and lead to meaningful political change.
+          </p>
 
-    <p>
-      Pepper Culpepper and Taeku Lee draw on a decade of research on policymaking and public opinion
-      to show how scandals can ignite public backlash and lead to meaningful political change.
-    </p>
+          <div class="btnrow">
+            <a class="btn primary"
+               href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106"
+               target="_blank" rel="noopener">
+              Buy – Amazon
+            </a>
 
-    <div class="btnrow">
-     <a class="btn primary" href="https://www.amazon.co.uk/..." target="_blank" rel="noopener">
-  Buy
-</a>
+            <a class="btn primary"
+               href="https://www.bloomsbury.com/uk/billionaire-backlash-9781399424110/"
+               target="_blank" rel="noopener">
+              Buy – Bloomsbury
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <a class="btn" href="https://www.bloomsbury.com/uk/billionaire-backlash-9781399424110/" target="_blank" rel="noopener">Learn more</a>
-    </div>
-  </div>
-
-</div>
-
-<h2 style="margin-top:40px;">Earlier Books</h2>
+      <h2 style="margin-top:40px;">Earlier Books</h2>
 
       <div class="grid" style="margin-top:16px;">
-
         <div class="card">
           <div class="book-small">
             <img class="cover small" src="./assets/quietpolitics.jpg" alt="Cover of Quiet Politics and Business Power">
@@ -227,7 +343,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
