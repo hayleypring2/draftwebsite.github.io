@@ -34,6 +34,7 @@
       color:var(--text);
       background:var(--bg);
       line-height:1.65;
+      overflow-x: hidden; /* C) prevent horizontal scroll on phones */
     }
 
     a{color:var(--accent)}
@@ -64,13 +65,31 @@
       color: #055fd1;
     }
 
-    /* Mobile cleanup: move Bluesky out of the brand row */
+   
+/* Mobile cleanup: move Bluesky out of the brand row */
 .bsky-mobile{ display:none; }
 
 @media (max-width:520px){
   .bsky-desktop{ display:none; } /* hide icon next to name */
   .bsky-mobile{ display:inline; } /* show text link in nav */
+
+  /* A) Cleaner phone nav: stack brand row over links */
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .navlinks{
+    width: 100%;
+    gap: 10px 14px;
+  }
+
+  /* B) Make buttons easier to tap on phones */
+  .btn{
+    padding: 12px 14px;
+  }
 }
+
 
 
     .brandwrap{
