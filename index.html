@@ -71,7 +71,7 @@
 
 @media (max-width:520px){
   .bsky-desktop{ display:none; } /* hide icon next to name */
-  .bsky-mobile{ display:inline; } /* show text link in nav */
+  .bsky-mobile{ display:inline; } /* show icon in nav */
 
   /* A) Cleaner phone nav: stack brand row over links */
   nav{
@@ -83,6 +83,16 @@
     width: 100%;
     gap: 10px 14px;
   }
+
+  /* Mobile Bluesky icon color */
+  .bsky-mobile{
+    color: #0a7cff; /* Bluesky blue */
+  }
+  .bsky-mobile:hover{
+    color: #055fd1;
+  }
+}
+
 
   /* B) Make buttons easier to tap on phones */
   .btn{
