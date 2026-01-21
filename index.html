@@ -287,6 +287,20 @@
       max-width: none;
       width: 100%;
     }
+
+    /* Make featured book banner clickable */
+.featured-book a{
+  display:block;
+}
+
+.featured-book a:hover .book-banner{
+  opacity: 0.97;
+}
+
+.book-banner{
+  cursor: pointer;
+}
+
   </style>
 </head>
 
@@ -358,11 +372,12 @@
       <h2>Upcoming Release</h2>
 
       <div class="card featured-book">
-        <img
-          class="book-banner"
-          src="./assets/BB_SOCIALS_V2_2.jpg"
-          alt="Billionaire Backlash book banner"
-        >
+       <a href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106"
+   target="_blank" rel="noopener"
+   aria-label="Buy Billionaire Backlash on Amazon">
+  <img class="book-banner" src="./assets/BB_SOCIALS_V2_2.jpg" alt="Billionaire Backlash book banner">
+</a>
+
 
         <div class="book-details">
           <p class="kicker">Upcoming Release: January 2026</p>
@@ -396,11 +411,21 @@
             Pepper Culpepper and Taeku Lee reveal how the shared anger of citizens can be channelled into a backlash that has the potential to reinvigorate our failing democracies. One corporate scandal at a time.
           </p>
 
-          <div class="btnrow">
-            <a class="btn primary" href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106" target="_blank" rel="noopener">Buy</a>
-            <a class="btn" href="billionaire-backlash.html" target="_blank" rel="noopener">Learn more</a>
-            <a class="btn" href="other-work.html">See other books</a>
-          </div>
+       <div class="btnrow">
+  <a class="btn primary"
+     href="https://www.amazon.co.uk/Billionaire-Backlash-Corporate-Scandal-Democracy/dp/1399424106"
+     target="_blank" rel="noopener">
+    Buy – Amazon
+  </a>
+
+  <a class="btn"
+     href="https://www.bloomsbury.com/uk/billionaire-backlash-9781399424110/"
+     target="_blank" rel="noopener">
+    Buy – Bloomsbury
+  </a>
+</div>
+
+
         </div>
       </div>
     </section>
